@@ -1,9 +1,11 @@
-# SE-Team3-TINF25B5
-CloverStack - Team 3 TINF25B5
+# CloverStack - a fun way to play online casino games
+TINF25B5 Team 3
 
-- Adam Elias Jakob Oueld-Sidi
+## Team
+- Adam Oueld-Sidi
 - Adolfo Loewenthal
 - Maksym Hubkhanov
-- Miriam Ida Wiebracht
+- Miriam Wiebracht
 
-Casino-App mit Glücksspielen und Chips-Verwaltung
+## Description
+A platform to play casino games without spending real money.
