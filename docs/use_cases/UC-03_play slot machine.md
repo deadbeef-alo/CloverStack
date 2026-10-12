@@ -16,34 +16,29 @@ HOW TO USE THIS TEMPLATE
 | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Miriam | 13       | [#25](https://github.com/deadbeef-alo/CloverStack/issues/25)<br>[#12, #13 — and write "Implements UC-NN" into each of these issues] |
 ## 1 Brief description
-
-<!-- One paragraph: the purpose of the use case and the value for the actor. -->
-
-[…]
+The player plays a round on the slot machine. They choose a bet, spin, and see the result. Winnings are paid out in chips to their account balance. The use case lets the player try their luck with chips from their balance and gives them a clear result for every round.
 ## 2 Actors
-
-- **Primary:** [role that starts the use case]
-- **Secondary:** [system or role the use case needs, or "none"]
-
+- **Primary:** Player
+- **Secondary:** none
 ## 3 Mockup
-
+	
 <!-- A wireframe is enough. Show the key step of this use case. -->
 
 ![Mockup UC-[NN]](../mockups/UC-[NN]_[name].png)
 
 ## 4 Flow of events
-
 ### 4.1 Basic flow
-
-<!-- The success case, 3 to 9 numbered steps (Cockburn). Actor and system take turns. -->
-
-1. The [actor] […].
-2. The system […].
-3. The [actor] […].
-4. The system […].
-
+1. The player opens the slot machine.
+2. The system shows the machine together with the player's current balance **(link zu UC-01 einfügen)** and a display showing the winning combinations. 
+3. The player chooses a bet amount and starts the spin. ^3a
+4. The system checks whether the balance covers the bet and withdraws the bet amount from the balance.
+5. The system determines the result of the spin and shows it to the player.
+6. The system credits any winnings to the balance and stores the round in the game history.
+7. The player sees the updated balance.
+8. The player can decide whether to play another round or leave the machine.
 ### 4.2 Alternative flows
-
+[[#^3a]] - Player cancels: After step 3, the player leaves the machine without spinning. The use case ends and nothing is withdrawn.
+4a - Players Balance is to low: The system determined that the balance doesn't cover the bet. The spin
 <!-- Name the step where each flow branches off and where it continues or ends.
      Errors, cancellations, and conflicts between users belong here.
      If your diagram shows another use case extending this one («extend»), name the step
