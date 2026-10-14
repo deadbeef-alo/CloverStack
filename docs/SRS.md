@@ -149,16 +149,19 @@ specific requirements: the use cases (3.1) and the quality requirements and cons
 
 ### 3.2 Usability
 
-| ID | Requirement | Author |
-| -- | ----------- | ------ |
+| ID       | Requirement              | Author       |
+| -------- | ------------------------ | ------------ |
 | NFR-U-01 | [measurable requirement] | [first name] |
 
 ### 3.3 Reliability
 
-| ID | Requirement | Author |
-| -- | ----------- | ------ |
-| NFR-R-01 | [measurable requirement] | [first name] |
+| ID       | Requirement                                                                                                                                      | Author       |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| NFR-R-*  | [measurable requirement]                                                                                                                         | [first name] |
+| NFR-R-01 | The bet, result, and payout for each round are stored together, ensuring that a system failure never results in an inconsistent account balance. | Miriam       |
+^a87ad3
 
+NFR-R-01: The bet, result, and payout for each round are stored together, ensuring that a system failure never results in an inconsistent account balance. - Miriam ^e635c3
 ### 3.4 Performance
 
 | ID | Requirement | Author |

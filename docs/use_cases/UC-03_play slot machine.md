@@ -30,24 +30,17 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 ### 4.1 Basic flow
 1. The player opens the slot machine.
 2. The system shows the machine together with the player's current balance **(link zu UC-01 einfügen)** and a display showing the winning combinations. 
-3. The player chooses a bet amount and starts the spin. ^3a
-4. The system checks whether the balance covers the bet and withdraws the bet amount from the balance.
+3. The player chooses a bet amount and starts the spin. ^44f5e3
+4. The system checks whether the balance covers the bet and withdraws the bet amount from the balance. ^667c57
 5. The system determines the result of the spin and shows it to the player.
-6. The system credits any winnings to the balance and stores the round in the game history.
+6. The system credits any winnings to the balance and stores the round in the game history. ^beac3a
 7. The player sees the updated balance.
 8. The player can decide whether to play another round or leave the machine.
 ### 4.2 Alternative flows
-[[#^3a]] - Player cancels: After step 3, the player leaves the machine without spinning. The use case ends and nothing is withdrawn.
-4a - Players Balance is to low: The system determined that the balance doesn't cover the bet. The spin
-<!-- Name the step where each flow branches off and where it continues or ends.
-     Errors, cancellations, and conflicts between users belong here.
-     If your diagram shows another use case extending this one («extend»), name the step
-     where it can start: "Extension point: …". If this use case always uses another one
-     («include»), write it into the step: "(includes UC-07)". -->
-
-**[N]a · [short name].** At step [N], [condition]. The system […]. The flow continues at
-step [M] / The use case ends.
-
+[[#^44f5e3|3a]] - Player cancels: After step 3, the player leaves the machine without spinning. No chips are withdrawn. The use case ends.
+[[#^667c57|4a]] - Players Balance is to low: The system determined that the balance doesn't cover the bet. The spin is canceled. The player can choose a different bet and start a new spin. The flow continues at step [[#^44f5e3|3]].
+[[#^667c57|4a]] - Bet outside the allowed range: The system determined that the players bet ist to low or to high. The system rejects the bet and shows the allowed range. The flow continues at step [[#^44f5e3|3]].
+[[#^beac3a|6a]] - Server error: The connection is lost or the server fails before the result is stored. The system does not keep the bet as lost: the bet is refunded. The use case ends.
 ### 4.3 Sequence diagram
 
 <!-- The flow above over time: the actor, your frontend, your backend, your database.
@@ -57,7 +50,11 @@ step [M] / The use case ends.
 ![Sequence diagram UC-[NN]](../diagrams/UC-[NN]_sequence.png)
 
 ## 5 Special requirements
+![[SRS#^e635c3|NFR-S-01]]
 
+
+
+- NFR-S-0X - The outcome of a spin shall be determined on the backend, never on the client.
 <!-- Quality requirements for this use case only, each with an ID that is unique in the
      whole SRS, e.g.,
      NFR-P-02 — The confirmation shall appear within 1 s for 95 % of the bookings.
@@ -66,13 +63,10 @@ step [M] / The use case ends.
 […]
 
 ## 6 Preconditions
-
+- The player is logged in.
+- The slot machine is available.
 <!-- The state of the system before the use case can start, e.g., "The user is logged in." -->
 
 - […]
-
 ## 7 Postconditions
-
-<!-- The state of the system after the use case, e.g., "The booking is stored." -->
-
-- […]
+- The player's balance includes the bet and any winnings.
