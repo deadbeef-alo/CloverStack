@@ -159,9 +159,7 @@ specific requirements: the use cases (3.1) and the quality requirements and cons
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
 | NFR-R-*  | [measurable requirement]                                                                                                                         | [first name] |
 | NFR-R-01 | The bet, result, and payout for each round are stored together, ensuring that a system failure never results in an inconsistent account balance. | Miriam       |
-^a87ad3
 
-NFR-R-01: The bet, result, and payout for each round are stored together, ensuring that a system failure never results in an inconsistent account balance. - Miriam ^e635c3
 ### 3.4 Performance
 
 | ID | Requirement | Author |
