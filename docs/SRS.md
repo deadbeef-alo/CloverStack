@@ -99,9 +99,9 @@ None
      within 1 s for 95 % of the requests. -->
 ### 3.2 Usability
 
-| ID       | Requirement              | Author       |
-| -------- | ------------------------ | ------------ |
-| NFR-U-01 | [measurable requirement] | [first name] |
+| ID       | Requirement                                                                          | Author |
+| -------- | ------------------------------------------------------------------------------------ | ------ |
+| NFR-U-01 | Each game mode should include a short tutorial that explains the basics of the game. | Miriam |
 ### 3.3 Reliability
 
 | ID       | Requirement                                                                                                                                           | Author |
@@ -109,14 +109,14 @@ None
 | NFR-R-01 | The bet, result, and payout for each round shall be stored together, ensuring that a system failure never results in an inconsistent account balance. | Miriam |
 ### 3.4 Performance
 
-| ID | Requirement | Author |
-| -- | ----------- | ------ |
-| NFR-P-01 | [measurable requirement] | [first name] |
+| ID       | Requirement                                                                                  | Author |
+| -------- | -------------------------------------------------------------------------------------------- | ------ |
+| NFR-P-01 | The account balance should be displayed in every section of the application within 1 second. | Adolfo |
 ### 3.5 Supportability
 
-| ID | Requirement | Author |
-| -- | ----------- | ------ |
-| NFR-S-01 | [measurable requirement] | [first name] |
+| ID       | Requirement                                                                                                                         | Author |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| NFR-S-01 | The application shall run in the current versions of Chrome, Firefox and Edge, verified by one manual test per browser per release. | Miriam |
 ### 3.6 Design constraints
 *Author: Miriam*
 
