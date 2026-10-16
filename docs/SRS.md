@@ -80,14 +80,14 @@ In contrast to commercial gambling sites, CloverStack is built for entertainment
 None
 ## 3 Specific requirements
 ### 3.1 Functionality
-#### 3.1.1 UC-01_View_account_balance
-*Author: Adolfo* · The player views its current balance · [Specifications](use_cases/UC-01_View_account_balance.md)
+#### 3.1.1 UC-01_view_account_balance
+*Author: Adolfo* · The player views its current balance · [Specifications](use_cases/UC-01_view_account_balance.md)
 #### 3.1.2 UC-02 [Verb object]
 *Author: Adam* · [One sentence.] · planned
 #### 3.1.3 UC-03_play-slot-machine
 *Author: Miriam* · The player plays a round on the slot machine. · [Specifications](use_cases/UC-03_play-slot-machine.md)
-#### 3.1.4 UC-04_Play_roulette
-*Author: Adolfo* · The player plays a round of roulette · [Specifications](use_cases/UC-04_Play_roulette.md)
+#### 3.1.4 UC-04_play_roulette
+*Author: Adolfo* · The player plays a round of roulette · [Specifications](use_cases/UC-04_play_roulette.md)
 #### 3.1.5 UC-05 [Verb object]
 *Author: Adam* · [One sentence.] · planned
 
@@ -131,11 +131,11 @@ A short setup instructions will be included in the “README.md” file.
 Not applicable. No components are purchased; only free components will be used.
 ### 3.9 Interfaces
 #### 3.9.1 User interfaces
-UC-01_View_account_balance:
+UC-01_view_account_balance:
 <img src="../mockups/UC-01_00.png" alt="Mockup UC-01_00" width="600">
 <img src="../mockups/UC-01_01.png" alt="Mockup UC-01_01" width="600">
 
-UC-04_Play_roulette:
+UC-04_play_roulette:
 <img src="../mockups/UC-04_00.png" alt="Mockup UC-04_00" width="600">
 <img src="../mockups/UC-04_01.png" alt="Mockup UC-04_01" width="600">
 <img src="../mockups/UC-04_02.png" alt="Mockup UC-04_02" width="600">

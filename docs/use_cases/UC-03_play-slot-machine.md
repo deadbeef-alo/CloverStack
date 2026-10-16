@@ -16,7 +16,7 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 ## 4 Flow of events
 ### 4.1 Basic flow
 1. The player opens the slot machine.
-2. The system shows the machine together with the player's current balance [UC-01_View_account_balance](use_cases/UC-01_View_account_balance) and a display showing the winning combinations. 
+2. The system shows the machine together with the player's current balance [UC-01_view_account_balance](use_cases/UC-01_view_account_balance) and a display showing the winning combinations.
 3. The player chooses a bet amount and starts the spin.
 4. The system checks whether the balance covers the bet and withdraws the bet amount from the balance.
 5. The system determines the result of the spin and shows it to the player.
