@@ -81,13 +81,13 @@ None
 ## 3 Specific requirements
 ### 3.1 Functionality
 #### 3.1.1 UC-01_View_account_balance
-*Author: Adolfo* · [One sentence.] · [UC-01_View_account_balance](use_cases/UC-01_View_account_balance.md)
+*Author: Adolfo* · The player views its current balance · [Specifications](use_cases/UC-01_View_account_balance.md)
 #### 3.1.2 UC-02 [Verb object]
-*Author: Adam* · [One sentence.] · [Specification](use_cases/UC-02_[name].md)
+*Author: Adam* · [One sentence.] · planned
 #### 3.1.3 UC-03_play-slot-machine
-*Author: Miriam* · The player plays a round on the slot machine. · [UC-03_play-slot-machine](use_cases/UC-03_play-slot-machine.md)
+*Author: Miriam* · The player plays a round on the slot machine. · [Specifications](use_cases/UC-03_play-slot-machine.md)
 #### 3.1.4 UC-04_Play_roulette
-*Author: Adolfo* · [One sentence.] · [UC-04_Play_roulette](use_cases/UC-04_Play_roulette.md)
+*Author: Adolfo* · The player plays a round of roulette · [Specifications](use_cases/UC-04_Play_roulette.md)
 #### 3.1.5 UC-05 [Verb object]
 *Author: Adam* · [One sentence.] · planned
 
