@@ -3,7 +3,7 @@
 <!--
 HOW TO USE THIS TEMPLATE
 - Copy this file per use case and name it UC-01_[name].md, UC-02_[name].md, …
-- Replace every  in square brackets.
+- Replace every [placeholder] in square brackets.
 - Name: verb plus object, one goal reached in one sitting ("Book a room", not "Click Save").
 - Describe what the actor and the system exchange, not which button is clicked —
   the mockup shows the screen.
@@ -12,8 +12,8 @@ HOW TO USE THIS TEMPLATE
   https://cin.ufpe.br/~if682/RUP/webtmpl/templates/req/rup_ucspec.htm
 -->
 
-| Author | Estimate | User stories |
-| ------ | -------- | ------------ |
+| Author       | Estimate       | User stories                                                        |
+| ------------ | -------------- | ------------------------------------------------------------------- |
 | [first name] | [story points] | [#12, #13 — and write "Implements UC-NN" into each of these issues] |
 
 ## 1 Brief description

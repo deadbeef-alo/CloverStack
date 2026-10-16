@@ -128,9 +128,9 @@ specific requirements: the use cases (3.1) and the quality requirements and cons
 
 *Author: [first name]* · [One sentence.] · [Specification](use_cases/UC-02_[name].md)
 
-#### 3.1.3 UC-03 [Verb object]
+#### 3.1.3 UC-03_play-slot-machine
 
-*Author: [first name]* · [One sentence.] · [Specification](use_cases/UC-03_[name].md)
+*Author: Miriam* · The player plays a round on the slot machine · [UC-03_play-slot-machine](use_cases/UC-03_play-slot-machine.md)
 
 #### 3.1.4 UC-04 [Verb object]
 
@@ -149,15 +149,16 @@ specific requirements: the use cases (3.1) and the quality requirements and cons
 
 ### 3.2 Usability
 
-| ID | Requirement | Author |
-| -- | ----------- | ------ |
+| ID       | Requirement              | Author       |
+| -------- | ------------------------ | ------------ |
 | NFR-U-01 | [measurable requirement] | [first name] |
 
 ### 3.3 Reliability
 
-| ID | Requirement | Author |
-| -- | ----------- | ------ |
-| NFR-R-01 | [measurable requirement] | [first name] |
+| ID       | Requirement                                                                                                                                      | Author       |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| NFR-R-*  | [measurable requirement]                                                                                                                         | [first name] |
+| NFR-R-01 | The bet, result, and payout for each round are stored together, ensuring that a system failure never results in an inconsistent account balance. | Miriam       |
 
 ### 3.4 Performance
 
