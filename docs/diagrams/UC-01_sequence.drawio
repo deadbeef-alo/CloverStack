@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/16.5.1 Chrome/96.0.4664.110 Electron/16.0.7 Safari/537.36">
+  <diagram id="i7KtP-Vs8fw_sYRqWalm" name="Sequence diagram">
+    <mxGraphModel dx="1406" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1019" pageHeight="1320" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XppZFFv2hi1EjOijFOD9-25" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;width=140;height=30;boundedLbl=1;verticalAlign=middle;align=left;spacingLeft=5;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="sd viewAccountBalance" vertex="1">
+          <mxGeometry height="550" width="850" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-1" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="alt" vertex="1">
+          <mxGeometry height="200" width="560" x="200" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-2" parent="1" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;size=40;fillColor=#f8cecc;strokeColor=#b85450;" value="Player" vertex="1">
+          <mxGeometry height="500" width="20" x="130" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-3" parent="XppZFFv2hi1EjOijFOD9-2" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="400" width="10" x="5" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Client" vertex="1">
+          <mxGeometry height="490" width="100" x="270" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-5" parent="XppZFFv2hi1EjOijFOD9-4" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
+          <mxGeometry height="380" width="10" x="45" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-8" parent="XppZFFv2hi1EjOijFOD9-4" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="37" y="227" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-9" edge="1" parent="XppZFFv2hi1EjOijFOD9-4" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" value="&amp;nbsp;4: Process the data">
+          <mxGeometry relative="1" x="-0.0909" y="-15" as="geometry">
+            <mxPoint x="-15" y="15" as="offset" />
+            <Array as="points">
+              <mxPoint x="10.999999999999773" y="248" />
+              <mxPoint x="10.999999999999773" y="238" />
+            </Array>
+            <mxPoint x="36" y="248" as="sourcePoint" />
+            <mxPoint x="30.999999999999773" y="238" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NZf6xs9IpYLKUcImQHF4-8" edge="1" parent="XppZFFv2hi1EjOijFOD9-4" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;rounded=0;" value="5: Shows account balance">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="45" y="308" as="sourcePoint" />
+            <mxPoint x="-125" y="308" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-10" edge="1" parent="1" source="XppZFFv2hi1EjOijFOD9-3" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;rounded=0;" target="XppZFFv2hi1EjOijFOD9-5" value="1: Clicks on balance section">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="170" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-11" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Backend" vertex="1">
+          <mxGeometry height="490" width="100" x="490" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-12" parent="XppZFFv2hi1EjOijFOD9-11" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="20" width="10" x="45" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-13" parent="1" style="shape=umlLifeline;participant=umlEntity;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Database" vertex="1">
+          <mxGeometry height="490" width="40" x="660" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-14" parent="XppZFFv2hi1EjOijFOD9-13" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="380" width="10" x="15" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0.106;entryY=0.282;rounded=0;entryDx=0;entryDy=0;entryPerimeter=0;" value="2: Requests player&#39;s balance data">
+          <mxGeometry relative="1" x="-0.4588" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="324.9999999999998" y="199.15999999999997" as="sourcePoint" />
+            <mxPoint x="676.0599999999997" y="199.15999999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;entryX=1;entryY=0;rounded=0;exitX=0.344;exitY=0.434;exitDx=0;exitDy=0;exitPerimeter=0;" value="3: Returns requested data">
+          <mxGeometry relative="1" x="-0.6138" y="-5" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="389" y="272.5" />
+            </Array>
+            <mxPoint x="678.44" y="272.9200000000001" as="sourcePoint" />
+            <mxPoint x="324" y="272.4999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XppZFFv2hi1EjOijFOD9-22" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="[success]" vertex="1">
+          <mxGeometry height="30" width="70" x="220" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="NZf6xs9IpYLKUcImQHF4-4" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="380" width="10" x="535" y="169" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
