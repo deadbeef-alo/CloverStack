@@ -1,20 +1,8 @@
 # UC-03_play-slot-machine
 
-<!--
-HOW TO USE THIS TEMPLATE
-- Copy this file per use case and name it UC-01_[name].md, UC-02_[name].md, …
-- Replace every  in square brackets.
-- Name: verb plus object, one goal reached in one sitting ("Book a room", not "Click Save").
-- Describe what the actor and the system exchange, not which button is clicked —
-  the mockup shows the screen.
-- Delete these comments once the use case is done.
-- Structure after the RUP template "Use-Case Specification":
-  https://cin.ufpe.br/~if682/RUP/webtmpl/templates/req/rup_ucspec.htm
--->
-
-| Author | Estimate | User stories                                                                                                                        |
-| ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Miriam | 13       | [#25](https://github.com/deadbeef-alo/CloverStack/issues/25)<br>[#12, #13 — and write "Implements UC-NN" into each of these issues] |
+| Author | Estimate | User stories                                                 |
+| ------ | -------- | ------------------------------------------------------------ |
+| Miriam | 13       | [#25](https://github.com/deadbeef-alo/CloverStack/issues/25) |
 ## 1 Brief description
 The player plays a round on the slot machine. They choose a bet, spin, and see the result. Winnings are paid out in chips to their account balance. The use case lets the player try their luck with chips from their balance and gives them a clear result for every round.
 ## 2 Actors
@@ -45,14 +33,6 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 
 ## 5 Special requirements
 - NFR-R-01 - The bet, result, and payout for each round are stored together, ensuring that a system failure never results in an inconsistent account balance.
-- 
-<!-- Quality requirements for this use case only, each with an ID that is unique in the
-     whole SRS, e.g.,
-     NFR-P-02 — The confirmation shall appear within 1 s for 95 % of the bookings.
-     System-wide ones go into SRS sections 3.2 to 3.5. Write "None" if there are none. -->
-
-[…]
-
 ## 6 Preconditions
 - The player is logged in.
 - The slot machine is available.
