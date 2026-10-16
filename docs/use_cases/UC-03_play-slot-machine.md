@@ -29,7 +29,7 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 - 4b - Bet outside the allowed range: The system determined that the players bet ist to low or to high. The system rejects the bet and shows the allowed range. The flow continues at step 3.
 - 5a - Server error: The connection is lost or the server fails before the result is stored. The system does not keep the bet as lost: the bet is refunded. The use case ends.
 ### 4.3 Sequence diagram
-![Sequence diagram](diagrams/UC-03_Sequence-diagram)
+![Sequence diagram](diagrams/UC-03_Sequence-diagram.md)
 
 ## 5 Special requirements
 - NFR-R-01 - The bet, result, and payout for each round are stored together, ensuring that a system failure never results in an inconsistent account balance.
