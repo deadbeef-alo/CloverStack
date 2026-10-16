@@ -16,7 +16,7 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 ## 4 Flow of events
 ### 4.1 Basic flow
 1. The player opens the slot machine.
-2. The system shows the machine together with the player's current balance **(link zu UC-01 einfügen)** and a display showing the winning combinations. 
+2. The system shows the machine together with the player's current balance [UC-01_View_account_balance](use_cases/UC-01_View_account_balance) and a display showing the winning combinations. 
 3. The player chooses a bet amount and starts the spin.
 4. The system checks whether the balance covers the bet and withdraws the bet amount from the balance.
 5. The system determines the result of the spin and shows it to the player.
@@ -76,7 +76,7 @@ sequenceDiagram
 
 ```
 ## 5 Special requirements
-- NFR-R-01 - The bet, result, and payout for each round are stored together, ensuring that a system failure never results in an inconsistent account balance.
+- NFR-R-01 - The bet, result, and payout for each round shall be stored together, ensuring that a system failure never results in an inconsistent account balance.
 ## 6 Preconditions
 - The player is logged in.
 - The slot machine is available.
