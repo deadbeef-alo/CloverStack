@@ -82,14 +82,14 @@ None
 ### 3.1 Functionality
 #### 3.1.1 UC-01_view_account_balance
 *Author: Adolfo* · The player views its current balance · [Specifications](use_cases/UC-01_view_account_balance.md)
-#### 3.1.2 UC-02 [Verb object]
-*Author: Adam* · [One sentence.] · planned
+#### 3.1.2 UC-02_Exchange_Money
+*Author: Adam* · The player exchanges money for chips. · [Specifications](use_cases/UC-02_ExchangeMoney.md)
 #### 3.1.3 UC-03_play-slot-machine
 *Author: Miriam* · The player plays a round on the slot machine. · [Specifications](use_cases/UC-03_play-slot-machine.md)
 #### 3.1.4 UC-04_play_roulette
 *Author: Adolfo* · The player plays a round of roulette · [Specifications](use_cases/UC-04_play_roulette.md)
-#### 3.1.5 UC-05 [Verb object]
-*Author: Adam* · [One sentence.] · planned
+#### 3.1.5 UC-05_play_Scratch_off_Ticket
+*Author: Adam* · The player scratches the ticket.  · [Specifications](use_cases/UC-05_play_Scratch_off_Ticket.md)
 
 <!-- QUALITY REQUIREMENTS (3.2 to 3.5)
      At least one per section. Each one: an ID, one sentence with "shall", a number you can
@@ -134,11 +134,13 @@ Not applicable. No components are purchased; only free components will be used.
 UC-01_view_account_balance:
 <img src="../mockups/UC-01_00.png" alt="Mockup UC-01_00" width="600">
 <img src="../mockups/UC-01_01.png" alt="Mockup UC-01_01" width="600">
-
+UC-02_exchange_money:
+<img src="/docs/mockups/UC-02_00.png" alt="Mockup UC-02_00" width="600">
 UC-04_play_roulette:
 <img src="../mockups/UC-04_00.png" alt="Mockup UC-04_00" width="600">
 <img src="../mockups/UC-04_01.png" alt="Mockup UC-04_01" width="600">
 <img src="../mockups/UC-04_02.png" alt="Mockup UC-04_02" width="600">
+<img src="/docs/mockups/UC-05_00.png" alt="Mockup UC-05_00" width="600">
 #### 3.9.2 Hardware interfaces
 Not applicable. The application runs in a web browser and uses no special hardware.
 #### 3.9.3 Software interfaces
