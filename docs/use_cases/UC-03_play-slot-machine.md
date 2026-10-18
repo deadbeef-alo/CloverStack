@@ -1,20 +1,28 @@
-# UC-03_play-slot-machine
+# UC-03_Play-slot-machine
 
 | Author | Estimate | User stories                                                 |
 | ------ | -------- | ------------------------------------------------------------ |
 | Miriam | 13       | [#25](https://github.com/deadbeef-alo/CloverStack/issues/25) |
+
 ## 1 Brief description
+
 The player plays a round on the slot machine. They choose a bet, spin, and see the result. Winnings are paid out in chips to their account balance. The use case lets the player try their luck with chips from their balance and gives them a clear result for every round.
+
 ## 2 Actors
+
 - **Primary:** Player
 - **Secondary:** none
+
 ## 3 Mockup
+
 <img src="../mockups/UC-03_00.png" alt="Mockup UC-03_00" width="600">
 <img src="../mockups/UC-03_01.png" alt="Mockup UC-03_01" width="600">
 <img src="../mockups/UC-03_02.png" alt="Mockup UC-03_02" width="600">
 
 ## 4 Flow of events
+
 ### 4.1 Basic flow
+
 1. The player opens the slot machine.
 2. The system shows the machine together with the player's current balance [UC-01_view_account_balance](use_cases/UC-01_view_account_balance) and a display showing the winning combinations.
 3. The player chooses a bet amount and starts the spin.
@@ -23,11 +31,14 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 6. The system credits any winnings to the balance and stores the round in the game history.
 7. The player sees the updated balance.
 8. The player can decide whether to play another round or leave the machine.
+
 ### 4.2 Alternative flows
+
 - 3a - Player cancels: After step 3, the player leaves the machine without spinning. No chips are withdrawn. The use case ends.
 - 4a - Players Balance is to low: The system determined that the balance doesn't cover the bet. The spin is canceled. The player can choose a different bet and start a new spin. The flow continues at step 3.
 - 4b - Bet outside the allowed range: The system determined that the players bet ist to low or to high. The system rejects the bet and shows the allowed range. The flow continues at step 3.
 - 5a - Server error: The connection is lost or the server fails before the result is stored. The system does not keep the bet as lost: the bet is refunded. The use case ends.
+
 ### 4.3 Sequence diagram
 
 ```mermaid
@@ -75,10 +86,16 @@ sequenceDiagram
 	Note over Player,Frontend: (8) Player plays another round or leaves
 
 ```
+
 ## 5 Special requirements
+
 - NFR-R-01 - The bet, result, and payout for each round shall be stored together, ensuring that a system failure never results in an inconsistent account balance.
+
 ## 6 Preconditions
+
 - The player is logged in.
 - The slot machine is available.
+
 ## 7 Postconditions
+
 - The player's balance includes the bet and any winnings.
