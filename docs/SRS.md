@@ -159,20 +159,28 @@ Not applicable. No components are purchased; only free components will be used.
 #### 3.9.1 User interfaces
 
 UC-01_view_account_balance:
+
 <img src="mockups/UC-01_00.png" alt="Mockup UC-01_00" width="600">
 <img src="mockups/UC-01_01.png" alt="Mockup UC-01_01" width="600">
+
 UC-02_exchange_money:
+
 <img src="mockups/UC-02_00.png" alt="Mockup UC-02_00" width="600">
+
 UC-03_play_slot-machine:
+
 <img src="mockups/UC-03_00.png" alt="Mockup UC-03_00" width="600">
 <img src="mockups/UC-03_01.png" alt="Mockup UC-03_01" width="600">
 <img src="mockups/UC-03_02.png" alt="Mockup UC-03_02" width="600">
 
 UC-04_play_roulette:
+
 <img src="mockups/UC-04_00.png" alt="Mockup UC-04_00" width="600">
 <img src="mockups/UC-04_01.png" alt="Mockup UC-04_01" width="600">
 <img src="mockups/UC-04_02.png" alt="Mockup UC-04_02" width="600">
+
 UC-05_play_Scratch_off_Ticket:
+
 <img src="mockups/UC-05_00.png" alt="Mockup UC-05_00" width="600">
 
 #### 3.9.2 Hardware interfaces
