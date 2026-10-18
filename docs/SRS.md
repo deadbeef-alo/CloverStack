@@ -1,18 +1,5 @@
 # CloverStack — Software Requirements Specification
 
-<!--
-HOW TO USE THIS TEMPLATE
-- Copy the whole docs/ folder into your repository.
-- Replace every [placeholder] in square brackets. Comments like this one are guidance: they
-  are invisible on GitHub, and you may delete them once a section is done.
-- Keep every heading and its number. If a section does not apply, write
-  "Not applicable" and one sentence why.
-- Every section you write names its author: in the "Author" line below its heading, or in
-  the Author column of a table. Prefilled sections need no author.
-- Structure after the RUP template "Software Requirements Specification":
-  https://cin.ufpe.br/~if682/RUP/webtmpl/templates/req/rup_srs.htm
--->
-
 | Team | Version | Last change |
 | ---- | ------- | ----------- |
 | CloverStack| 0.1 | 12.10.2026 |
@@ -90,13 +77,6 @@ None
 *Author: Adolfo* · The player plays a round of roulette · [Specifications](use_cases/UC-04_play_roulette.md)
 #### 3.1.5 UC-05_play_Scratch_off_Ticket
 *Author: Adam* · The player scratches the ticket.  · [Specifications](use_cases/UC-05_play_Scratch_off_Ticket.md)
-
-<!-- QUALITY REQUIREMENTS (3.2 to 3.5)
-     At least one per section. Each one: an ID, one sentence with "shall", a number you can
-     test, and if possible stimulus, response and measure. IDs are unique in the whole SRS,
-     including the special requirements of your use cases.
-     Example: NFR-P-01 — When 50 users search at the same time, the app lists free slots
-     within 1 s for 95 % of the requests. -->
 ### 3.2 Usability
 
 | ID       | Requirement                                                                          | Author |
@@ -135,12 +115,18 @@ UC-01_view_account_balance:
 <img src="../mockups/UC-01_00.png" alt="Mockup UC-01_00" width="600">
 <img src="../mockups/UC-01_01.png" alt="Mockup UC-01_01" width="600">
 UC-02_exchange_money:
-<img src="/docs/mockups/UC-02_00.png" alt="Mockup UC-02_00" width="600">
+<img src="../mockups/UC-02_00.png" alt="Mockup UC-02_00" width="600">
+UC-03_play_slot-machine:
+<img src="../mockups/UC-03_00.png" alt="Mockup UC-03_00" width="600">
+<img src="../mockups/UC-03_01.png" alt="Mockup UC-03_01" width="600">
+<img src="../mockups/UC-03_02.png" alt="Mockup UC-03_02" width="600">
+
 UC-04_play_roulette:
 <img src="../mockups/UC-04_00.png" alt="Mockup UC-04_00" width="600">
 <img src="../mockups/UC-04_01.png" alt="Mockup UC-04_01" width="600">
 <img src="../mockups/UC-04_02.png" alt="Mockup UC-04_02" width="600">
-<img src="/docs/mockups/UC-05_00.png" alt="Mockup UC-05_00" width="600">
+UC-05_play_Scratch_off_Ticket:
+<img src="../mockups/UC-05_00.png" alt="Mockup UC-05_00" width="600">
 #### 3.9.2 Hardware interfaces
 Not applicable. The application runs in a web browser and uses no special hardware.
 #### 3.9.3 Software interfaces

@@ -9,10 +9,10 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 - **Primary:** Player
 - **Secondary:** none
 ## 3 Mockup
-	
-<!-- A wireframe is enough. Show the key step of this use case. -->
+<img src="../mockups/UC-03_00.png" alt="Mockup UC-03_00" width="600">
+<img src="../mockups/UC-03_01.png" alt="Mockup UC-03_01" width="600">
+<img src="../mockups/UC-03_02.png" alt="Mockup UC-03_02" width="600">
 
-![Mockup UC-[NN]](../mockups/UC-[NN]_[name].png)
 ## 4 Flow of events
 ### 4.1 Basic flow
 1. The player opens the slot machine.
