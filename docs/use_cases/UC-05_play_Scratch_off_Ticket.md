@@ -70,32 +70,4 @@ This use case describes how a player plays a scratch-off ticket to win chips.
 
 ## 9. Sequence Diagram
 
-```plantuml
-@startuml
-actor Player
-participant "Game System" as System
-
-Player -> System: Open scratch-off tickets
-System --> Player: Display available tickets and costs
-
-Player -> System: Select ticket
-System -> System: Check chip balance
-
-alt Enough chips
-    System -> System: Deduct ticket cost
-    System --> Player: Display scratch-off ticket
-    Player -> System: Scratch ticket
-    System -> System: Evaluate ticket
-
-    alt Winning ticket
-        System -> System: Credit prize
-        System --> Player: Display win and updated balance
-    else No prize
-        System --> Player: Display no-prize result and balance
-    end
-else Insufficient chips
-    System --> Player: Display insufficient-chips message
-end
-
-@enduml
-```
+![Use Case Diagram](../diagrams/UC-05_Sequence.drawio.png)

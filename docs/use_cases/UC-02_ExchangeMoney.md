@@ -68,27 +68,4 @@ This use case describes how a player exchanges virtual money for chips in order 
 
 ## 9. Sequence Diagram
 
-```plantuml
-@startuml
-actor Player
-participant "Game System" as System
-
-Player -> System: Open chip exchange
-System --> Player: Display exchange options
-
-Player -> System: Select exchange option
-System --> Player: Display cost and chips received
-
-Player -> System: Confirm exchange
-System -> System: Check virtual-money balance
-
-alt Sufficient virtual money
-    System -> System: Deduct virtual money
-    System -> System: Credit chips
-    System --> Player: Confirm exchange and display updated balances
-else Insufficient virtual money
-    System --> Player: Display insufficient-funds message
-end
-
-@enduml
-```
+![Use Case Diagram](../diagrams/UC-02_Sequence.drawio.png)
