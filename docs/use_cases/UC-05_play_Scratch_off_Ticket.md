@@ -8,12 +8,13 @@ This use case describes how a player plays a scratch-off ticket to win chips.
 - **Primary Actor:** Player
 - **Supporting System:** Game System
 
-## 3. Preconditions
-- The player is logged in.
-- The player has enough chips to purchase a scratch-off ticket.
-- Scratch-off tickets are available.
+## 3. Mockup
 
-## 4. Basic Flow
+<img src="/docs/mockups/UC-05_00.png" alt="Mockup UC-05_00" width="600">
+
+## 4 Flow of events
+## 4.1 Basic Flow
+
 1. The player opens the scratch-off ticket section.
 2. The system displays the available scratch-off tickets and their costs.
 3. The player selects a scratch-off ticket.
@@ -27,32 +28,42 @@ This use case describes how a player plays a scratch-off ticket to win chips.
 11. The system displays the result and the updated chip balance.
 12. The use case ends.
 
-## 5. Alternative Flows
+## 4.2 Alternative Flows
 
-### A1: Insufficient Chips
+### Insufficient Chips
 - At step 4, the system detects that the player does not have enough chips.
 - The system displays an insufficient-chips message.
 - The player can return to the ticket selection or exchange virtual money for chips.
 - The use case ends or resumes after the player obtains enough chips.
 
-### A2: No Prize
+### No Prize
 - At step 9, the system determines that the ticket is not a winner.
 - The system informs the player that no prize has been won.
 - The system displays the updated chip balance.
 - The use case ends.
 
-### A3: Ticket Unavailable
+### Ticket Unavailable
 - At step 3, the selected ticket is no longer available.
 - The system informs the player and displays the available tickets again.
 - The player can select another ticket.
 - The use case resumes at step 2.
 
-## 6. Special Requirements
+### 4.3 Sequence diagram
+
+![Use Case Diagram](../diagrams/UC-05_Sequence.drawio.png)
+
+## 5. Special Requirements
 - The system must calculate results reliably and consistently.
 - The chip balance must be updated correctly.
 - Each ticket must be evaluated only once.
 - The system must clearly display the result and any prize awarded.
 - The system must prevent the chip balance from becoming negative.
+
+## 6 Preconditions
+
+- The player is logged in.
+- The player has enough chips to purchase a scratch-off ticket.
+- Scratch-off tickets are available.
 
 ## 7. Postconditions
 **Success:**
@@ -66,8 +77,6 @@ This use case describes how a player plays a scratch-off ticket to win chips.
 - If the ticket is unavailable, the player's chip balance remains unchanged.
 
 ## 8. Story Points
-**Estimated Effort:** 5 Story Points
+**Estimated Effort:** 13 Story Points
 
-## 9. Sequence Diagram
 
-![Use Case Diagram](../diagrams/UC-05_Sequence.drawio.png)
