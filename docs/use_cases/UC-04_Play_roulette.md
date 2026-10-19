@@ -40,6 +40,9 @@ This feature allows the player to play roulette and place a bet, which in case o
 ### 4.3 Sequence diagram
 ![Sequence diagram UC-04](../diagrams/UC-04_sequence.png)
 
+### 4.4 Activity diagram
+![Activity diagram UC-04](../diagrams/UC-04_activity.png)
+
 ## 5 Special requirements
 n/a
 

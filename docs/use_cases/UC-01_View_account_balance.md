@@ -31,12 +31,14 @@ n/a
 ### 4.3 Sequence diagram
 ![Sequence diagram UC-01](../diagrams/UC-01_sequence.png)
 
+### 4.4 Activity diagram
+![Activity diagram UC-01](../diagrams/UC-01_activity.png)
+
 ## 5 Special requirements
 n/a
 
 ## 6 Preconditions
 1. The player is logged in.
-
 
 ## 7 Postconditions
 n/a
