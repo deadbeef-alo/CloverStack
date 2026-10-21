@@ -28,7 +28,7 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 3. The player chooses a bet amount and starts the spin.
 4. The system checks whether the balance covers the bet and withdraws the bet amount from the balance.
 5. The system determines the result of the spin and shows it to the player.
-6. The system credits any winnings to the balance and stores the round in the game history.
+6. The system credits any winnings to the balance.
 7. The player sees the updated balance.
 8. The player can decide whether to play another round or leave the machine.
 
@@ -86,7 +86,63 @@ sequenceDiagram
 	Note over Player,Frontend: (8) Player plays another round or leaves
 
 ```
+### 4.4 Activity diagram
+<!-- The flow of events as an activity diagram. Commit the source file next
+to the image. -->
 
+### 4.4 Activity diagram
+
+```mermaid
+flowchart TB
+    S((" ")):::init
+
+    subgraph System
+        direction TB
+        B["Show machine, balance<br/>and winning combinations"]
+        M{" "}
+        D3{"Bet within allowed range?"}
+        R1["Show insufficient-balance message"]
+        R2["Reject bet and show allowed range"]
+        W["Withdraw bet from balance"]
+        F["Determine result of spin"]
+        G{"Server error before<br/>round is stored?"}
+        H["Refund bet"]
+        I["Show error message"]
+        J["Credit winnings to balance"]
+        N["Show result of spin"]
+        O["Show updated balance"]
+        END2((" ")):::final
+    end
+
+    subgraph Player
+        direction TB
+        A["Open slot machine"]
+        C["Choose bet amount"]
+        D{"Player leaves?"}
+        L1["Leave machine<br/>(no chips withdrawn)"]
+        E["Start spin"]
+        P["See updated balance"]
+        Q{"Play another round?"}
+        L2["Leave machine"]
+	    END1((" ")):::final
+	    END3((" ")):::final    
+    end
+
+    S --> A --> B --> M
+    M --> C --> D
+    D -- "[cancel]" --> L1 --> END1
+    D -- "[spin]" --> E --> D3
+    D3 -- "[balance too low]" --> R1 --> M
+    
+    D3 -- "[out of range]" --> R2 --> M
+    D3 -- "[valid bet]" --> W --> F --> G
+    G -- "[server error]" --> H --> I --> END2
+    G -- "[else]" --> N --> J --> O --> P --> Q
+    Q -- "[play again]" --> M
+    Q -- "[leave]" --> L2 --> END3
+```
+
+![Activity diagram UC-[NN]](../diagrams/UC-[NN]_activity.png)
 ## 5 Special requirements
 
 - NFR-R-01 - The bet, result, and payout for each round shall be stored together, ensuring that a system failure never results in an inconsistent account balance.
