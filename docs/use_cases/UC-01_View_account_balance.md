@@ -3,7 +3,8 @@
 | ------ | -------- | ------------ |
 | Adolfo | 5        | [#9](https://github.com/deadbeef-alo/CloverStack/issues/9) |
 
-<!-- [#12, #13 — and write "Implements UC-NN" into each of these issues] -->
+ 
+Realization: [UCR-01](../use_case_realizations/UCR-01_view_account_balance)
 
 ## 1 Brief description
 This feature allows the user to view its current balance of virtual money and chips. It should be accessible from every menu and show the important information clearly.
