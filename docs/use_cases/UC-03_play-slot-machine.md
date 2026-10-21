@@ -3,7 +3,7 @@
 | Author | Estimate | User stories                                                 |
 | ------ | -------- | ------------------------------------------------------------ |
 | Miriam | 13       | [#25](https://github.com/deadbeef-alo/CloverStack/issues/25) |
-
+Realization: [UCR-03](../use_case_realizations/UCR-03_play-slot-machine.md)
 ## 1 Brief description
 
 The player plays a round on the slot machine. They choose a bet, spin, and see the result. Winnings are paid out in chips to their account balance. The use case lets the player try their luck with chips from their balance and gives them a clear result for every round.
