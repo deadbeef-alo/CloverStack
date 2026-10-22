@@ -28,14 +28,46 @@ This realization shows how the use case UC-03 Play slot machine is carried out i
 | :PlaySlotMachine | control    | Coordinates the round: checks the bet against balance and allowed range, withdraws the bet, determines the result of the spin, credits the winnings or refunds the bet on a server error |
 | :Account         | entity     | Stores the player's chip balance; withdraws, deposits and refunds chips                                                                                                                  |
 ### 2.2 Sequence diagrams
+```mermaid
+sequenceDiagram
+    actor Player
+    participant V as :SlotMachineView<br/>«boundary»
+    participant C as :PlaySlotMachine<br/>«control»
+    participant A as :Account<br/>«entity»
 
-<!-- The basic flow and the alternative flows: alt if a flow rejoins, break if it ends the use
-     case, opt for an optional step, loop for a repeated one, ref for an included use case.
-     One diagram is enough while it stays readable; otherwise one per flow.
-     Commit the source file next to the image. -->
+    Player->>V: openMachine()
+    V->>C: open()
+    C->>A: getBalance()
+    A-->>C: balance
+    C-->>V: balance, combinations, betRange
+    V-->>Player: show machine
 
-![Sequence diagram UCR-[NN]](../diagrams/UCR-[NN]_sequence.png)
+    loop until the bet is accepted
+        break (3a) Player leaves
+            Player->>V: leave()
+        end
+        Player->>V: spin(bet)
+        V->>C: spin(bet)
+        C->>A: getBalance()
+        A-->>C: balance
+        alt (4a, 4b) balance too low or bet out of range
+            C-->>V: rejected(reason)
+            V-->>Player: show message, choose another bet
+        else bet valid
+            C->>A: withdraw(bet)
+        end
+    end
 
+    C->>C: determineResult()
+    break (5a) Server error
+        C->>A: refund(bet)
+        C-->>V: error
+        V-->>Player: show error message
+    end
+    C->>A: deposit(winnings)
+    C-->>V: result, newBalance
+    V-->>Player: show result, updated balance
+```
 ### 2.3 Walkthrough
 
 <!-- Walk through the diagrams in a few sentences: which object does what, in which order,
