@@ -3,7 +3,7 @@
 | ------ | -------- | ------------ |
 | Adolfo | 13        | [#23](https://github.com/deadbeef-alo/CloverStack/issues/23) |
 
-<!-- [#12, #13 — and write "Implements UC-NN" into each of these issues] -->
+Realization: [UCR-04](../use_case_realizations/UCR-04_play_roulette)
 
 ## 1 Brief description
 This feature allows the player to play roulette and place a bet, which in case of winning should give the player chips.
@@ -39,6 +39,9 @@ This feature allows the player to play roulette and place a bet, which in case o
 
 ### 4.3 Sequence diagram
 ![Sequence diagram UC-04](../diagrams/UC-04_sequence.png)
+
+### 4.4 Activity diagram
+![Activity diagram UC-04](../diagrams/UC-04_activity.png)
 
 ## 5 Special requirements
 n/a
