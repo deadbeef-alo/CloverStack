@@ -11,7 +11,7 @@ flowchart TB
         R2["Reject bet and show allowed range"]
         W["Withdraw bet from balance"]
         F["Determine result of spin"]
-        G{"Server error before<br/>round is stored?"}
+        G{"Server error before<br/>payout?"}
         H["Refund bet"]
         I["Show error message"]
         J["Credit winnings to balance"]
@@ -46,4 +46,7 @@ flowchart TB
     G -- "[else]" --> N --> J --> O --> P --> Q
     Q -- "[play again]" --> M
     Q -- "[leave]" --> L2 --> END3
+    
+    classDef init fill:#000,stroke:#000 
+    classDef final fill:#fff,stroke:#000,stroke-width:4px
 ```

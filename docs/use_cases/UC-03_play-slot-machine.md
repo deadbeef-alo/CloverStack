@@ -135,6 +135,9 @@ flowchart TB
     G -- "[else]" --> N --> J --> O --> P --> Q
     Q -- "[play again]" --> M
     Q -- "[leave]" --> L2 --> END3
+    
+    classDef init fill:#000,stroke:#000 
+    classDef final fill:#fff,stroke:#000,stroke-width:4px
 ```
 ## 5 Special requirements
 - NFR-R-01 - The bet, result, and payout for each round shall be stored together, ensuring that a system failure never results in an inconsistent account balance.
