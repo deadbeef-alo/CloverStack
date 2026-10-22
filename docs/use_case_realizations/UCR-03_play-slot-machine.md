@@ -3,6 +3,7 @@
 | Author | Realizes                                                           |
 | ------ | ------------------------------------------------------------------ |
 | Miriam | [UC-03_play-slot-machine](../use_cases/UC-03_play-slot-machine.md) |
+
 Use Case: [UC-03](../use_cases/UC-03_play-slot-machine.md)
 ## 1 Introduction
 This realization shows how the use case UC-03 Play slot machine is carried out inside the system: which objects take part and in which order they work together. It covers the basic flow (steps 1–8) and all alternative flows (3a, 4a, 4b, 5a). The balance display itself is taken over from UC-01 and is not detailed here.
