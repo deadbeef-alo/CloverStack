@@ -1,4 +1,3 @@
-
 ```mermaid
 sequenceDiagram
     actor Player

@@ -8,12 +8,13 @@ This use case describes how a player exchanges virtual money for chips in order 
 - **Primary Actor:** Player
 - **Supporting System:** Game System
 
-## 3. Preconditions
-- The player is logged in.
-- The player has a sufficient virtual-money balance.
-- The chip exchange service is available.
+## 3. Mockup
 
-## 4. Basic Flow
+<img src="/docs/mockups/UC-02_00.png" alt="Mockup UC-02_00" width="600">
+
+## 4 Flow of events
+## 4.1 Basic Flow
+
 1. The player opens the chip exchange section.
 2. The system displays the available exchange options and their costs.
 3. The player selects an exchange option.
@@ -25,33 +26,43 @@ This use case describes how a player exchanges virtual money for chips in order 
 9. The system displays a confirmation and the updated balances.
 10. The use case ends.
 
-## 5. Alternative Flows
+## 4.2 Alternative Flows
 
-### A1: Insufficient Virtual Money
+### Insufficient Virtual Money
 - At step 6, the system detects that the player does not have enough virtual money.
 - The system displays an insufficient-funds message.
 - No virtual money is deducted and no chips are credited.
 - The player can select a cheaper exchange option or cancel the transaction.
 - The use case ends or resumes at step 2.
 
-### A2: Player Cancels the Exchange
+### Player Cancels the Exchange
 - Before confirming the exchange at step 5, the player cancels the transaction.
 - The system returns to the exchange options.
 - Neither balance is changed.
 - The use case ends.
 
-### A3: Exchange Processing Error
+### Exchange Processing Error
 - During steps 7 or 8, the system encounters an error.
 - The system ensures that the transaction does not leave the balances inconsistent.
 - The system informs the player that the exchange could not be completed.
 - The use case ends.
 
-## 6. Special Requirements
+### 4.3 Sequence diagram
+
+![Use Case Diagram](../diagrams/UC-02_Sequence.drawio.png)
+
+## 5. Special Requirements
 - The system must use clearly defined exchange rates.
 - The transaction must update both balances consistently.
 - The system must prevent duplicate transactions.
 - The system must prevent negative virtual-money or chip balances.
 - The system must display a confirmation after a successful exchange.
+
+## 6 Preconditions
+
+- The player is logged in.
+- The player has a sufficient virtual-money balance.
+- The chip exchange service is available.
 
 ## 7. Postconditions
 **Success:**
@@ -64,31 +75,4 @@ This use case describes how a player exchanges virtual money for chips in order 
 - The player's balances remain consistent.
 
 ## 8. Story Points
-**Estimated Effort:** 5 Story Points
-
-## 9. Sequence Diagram
-
-```plantuml
-@startuml
-actor Player
-participant "Game System" as System
-
-Player -> System: Open chip exchange
-System --> Player: Display exchange options
-
-Player -> System: Select exchange option
-System --> Player: Display cost and chips received
-
-Player -> System: Confirm exchange
-System -> System: Check virtual-money balance
-
-alt Sufficient virtual money
-    System -> System: Deduct virtual money
-    System -> System: Credit chips
-    System --> Player: Confirm exchange and display updated balances
-else Insufficient virtual money
-    System --> Player: Display insufficient-funds message
-end
-
-@enduml
-```
+**Estimated Effort:** 8 Story Points
