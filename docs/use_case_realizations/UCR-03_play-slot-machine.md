@@ -69,20 +69,13 @@ sequenceDiagram
     V-->>Player: show result, updated balance
 ```
 ### 2.3 Walkthrough
+The player opens the slot machine (1). `:SlotMachineView` asks `:PlaySlotMachine` for the data, which reads the balance from `:Account`. The view shows the balance, the winning combinations and the allowed bet range (2).
 
-<!-- Walk through the diagrams in a few sentences: which object does what, in which order,
-     and how the diagrams fit together. Refer to the steps of the use case (1, 2, 4a …). -->
+The player chooses a bet and spins (3). If the player leaves instead, the use case ends and nothing is withdrawn (3a). Otherwise the control checks the bet (4). If the balance is too low (4a) or the bet is out of range (4b), the view shows the reason and the player chooses another bet (back to step 3). If the bet is valid, the control withdraws it from `:Account`.
 
-[…]
-
+The control then determines the result (5). If a server error occurs, it refunds the bet, the view shows an error message, and the use case ends (5a). Otherwise the control credits the winnings (6), and the view shows the result and the new balance (7). The player can then play another round or leave (8).
 ### 2.4 State machine
 Not applicable. ":Account" only holds a balance, not a status with rules.
 ## 3 Derived requirements
-
-<!-- Requirements the design adds and the implementation must handle, each with an ID that is
-     unique in the whole SRS, e.g.,
-     DR-02-01 — The slot check and the insert of the booking run in one transaction.
-     DR-02-02 — The e-mails are sent asynchronously; a failed send is retried three times.
-     Write "None" if there are none. -->
-
-- [DR-NN-01 — …]
+- DR-03-01 - The result of a spin is determined in the backend only.
+- DR-03-02 - The balance check and the withdrawal of the bet run in one transaction.
