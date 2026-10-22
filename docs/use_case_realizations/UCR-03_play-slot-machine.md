@@ -1,18 +1,5 @@
 # UCR-03_play-slot-machine — Use-Case Realization
 
-<!--
-HOW TO USE THIS TEMPLATE
-- Copy this file per realization and name it UCR-[NN]_[name].md, with the number of its
-  use case: UCR-02_book_a_room.md realizes UC-02.
-- Replace every [placeholder] in square brackets.
-- Stay at the analysis level from Lecture 4: boundary, control, and entity objects, no
-  framework classes yet. Task 5 replaces them with your design classes.
-- Delete these comments once the realization is done.
-- Structure after the RUP template "Use-Case Realization Specification":
-  https://cin.ufpe.br/~if682/RUP/webtmpl/templates/a_and_d/rup_ucrs.htm
-  Section 2 is RUP's "Flow of Events — Design".
--->
-
 | Author | Realizes                                                           |
 | ------ | ------------------------------------------------------------------ |
 | Miriam | [UC-03_play-slot-machine](../use_cases/UC-03_play-slot-machine.md) |

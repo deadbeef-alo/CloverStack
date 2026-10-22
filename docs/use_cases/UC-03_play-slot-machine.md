@@ -37,7 +37,7 @@ The player plays a round on the slot machine. They choose a bet, spin, and see t
 - 3a - Player cancels: After step 3, the player leaves the machine without spinning. No chips are withdrawn. The use case ends.
 - 4a - Players Balance is to low: The system determined that the balance doesn't cover the bet. The spin is canceled. The player can choose a different bet and start a new spin. The flow continues at step 3.
 - 4b - Bet outside the allowed range: The system determined that the players bet ist to low or to high. The system rejects the bet and shows the allowed range. The flow continues at step 3.
-- 5a - Server error: The connection is lost or the server fails before the result is stored. The system does not keep the bet as lost: the bet is refunded. The use case ends.
+- 5a - Server error: The connection is lost or the server fails before the winnings are paid out. The system does not keep the bet as lost: the bet is refunded. The use case ends.
 
 ### 4.3 Sequence diagram
 
@@ -87,11 +87,6 @@ sequenceDiagram
 
 ```
 ### 4.4 Activity diagram
-<!-- The flow of events as an activity diagram. Commit the source file next
-to the image. -->
-
-### 4.4 Activity diagram
-
 ```mermaid
 flowchart TB
     S((" ")):::init
@@ -105,7 +100,7 @@ flowchart TB
         R2["Reject bet and show allowed range"]
         W["Withdraw bet from balance"]
         F["Determine result of spin"]
-        G{"Server error before<br/>round is stored?"}
+        G{"Server error before<br/>payout?"}
         H["Refund bet"]
         I["Show error message"]
         J["Credit winnings to balance"]
@@ -141,17 +136,10 @@ flowchart TB
     Q -- "[play again]" --> M
     Q -- "[leave]" --> L2 --> END3
 ```
-
-![Activity diagram UC-[NN]](../diagrams/UC-[NN]_activity.png)
 ## 5 Special requirements
-
 - NFR-R-01 - The bet, result, and payout for each round shall be stored together, ensuring that a system failure never results in an inconsistent account balance.
-
 ## 6 Preconditions
-
 - The player is logged in.
 - The slot machine is available.
-
 ## 7 Postconditions
-
 - The player's balance includes the bet and any winnings.
