@@ -52,6 +52,10 @@ This use case describes how a player plays a scratch-off ticket to win chips.
 
 ![Use Case Diagram](../diagrams/UC-05_Sequence.drawio.png)
 
+### 4.4 Activity diagram
+
+![Activity diagram UC-02](../diagrams/UC-05_activity.drawio.png)
+
 ## 5. Special Requirements
 - The system must calculate results reliably and consistently.
 - The chip balance must be updated correctly.

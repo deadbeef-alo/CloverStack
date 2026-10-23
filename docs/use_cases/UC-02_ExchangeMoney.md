@@ -51,6 +51,10 @@ This use case describes how a player exchanges virtual money for chips in order 
 
 ![Use Case Diagram](../diagrams/UC-02_Sequence.drawio.png)
 
+### 4.4 Activity diagram
+
+![Activity diagram UC-02](../diagrams/UC-02_activity.drawio.png)
+
 ## 5. Special Requirements
 - The system must use clearly defined exchange rates.
 - The transaction must update both balances consistently.
