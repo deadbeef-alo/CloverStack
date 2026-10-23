@@ -62,6 +62,93 @@ The player chooses a bet and spins (3). If the player leaves instead, the use ca
 The control then determines the result (5). If a server error occurs, it refunds the bet, the view shows an error message, and the use case ends (5a). Otherwise the control credits the winnings (6), and the view shows the result and the new balance (7). The player can then play another round or leave (8).
 ### 2.4 State machine
 Not applicable. ":Account" only holds a balance, not a status with rules.
+### 2.5 Design classes
+<!-- The classes of your code that realize this use case. Commit the source
+files next to
+ the images. -->
+
+| Analysis object (2.1)       | Design class(es)                       |
+| --------------------------- | -------------------------------------- |
+| :SlotMachineView «boundary» | SlotMachinePage, SlotMachineController |
+| :PlaySlotMachine «control»  | SlotMachineService                     |
+| :Account «entity»           | Account                                |
+```mermaid
+classDiagram
+    direction TB
+ 
+    class SlotMachinePage {
+        <<React component>>
+        +open()
+        +spin(bet)
+        +leave()
+    }
+    class SlotMachineController {
+        <<Express controller>>
+        +getMachine()
+        +spin(bet)
+    }
+    class SlotMachineService {
+        +openMachine()
+        +spin(bet)
+        -determineResult()
+    }
+    class Account {
+        -chips
+        +getChips()
+        +withdraw(amount)
+        +deposit(amount)
+        +refund(amount)
+    }
+ 
+    SlotMachinePage ..> SlotMachineController : HTTP request
+    SlotMachineController --> SlotMachineService
+    SlotMachineService ..> Account
+```
+
+
+```mermaid
+sequenceDiagram
+    actor Player
+    participant P as :SlotMachinePage
+    participant C as :SlotMachineController
+    participant S as :SlotMachineService
+    participant A as :Account
+ 
+    Player->>P: open()
+    P->>C: getMachine()
+    C->>S: openMachine()
+    S->>A: getChips()
+    A-->>S: chips
+    S-->>P: chips, combinations, betRange
+    P-->>Player: show machine
+ 
+    loop until the bet is accepted
+        break (3a) Player leaves
+            Player->>P: leave()
+        end
+        Player->>P: spin(bet)
+        P->>C: spin(bet)
+        C->>S: spin(bet)
+        S->>A: getChips()
+        A-->>S: chips
+        alt (4a, 4b) balance too low or bet out of range
+            S-->>P: rejected(reason)
+            P-->>Player: show message, choose another bet
+        else bet valid
+            S->>A: withdraw(bet)
+        end
+    end
+ 
+    S->>S: determineResult()
+    break (5a) Server error
+        S->>A: refund(bet)
+        S-->>P: error
+        P-->>Player: show error message
+    end
+    S->>A: deposit(winnings)
+    S-->>P: result, newBalance
+    P-->>Player: show result, updated balance
+```
 ## 3 Derived requirements
 - DR-03-01 - The result of a spin is determined in the backend only.
 - DR-03-02 - The balance check and the withdrawal of the bet run in one transaction.
