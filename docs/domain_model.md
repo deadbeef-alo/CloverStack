@@ -8,30 +8,38 @@ classDiagram
     direction LR
  
     class Account {
-        username: String
-        chips: Integer
-        virtualMoney: Decimal
+        - username: String
+        - chips: Integer
+        - virtualMoney: Decimal
+        + getUsername() String
+        + getChips() Integer
+        + getVirtualMoney() Decimal
     }
     class Game {
-        name: String
-        minBet: Integer
-        maxBet: Integer
+        - name: String
+        - minBet: Integer
+        - maxBet: Integer
+        + placeBet() void
     }
     class GameRound {
-        bet: Integer
-        result: String
-        payout: Integer
-        playedAt: DateTime
+        - bet: Integer
+        - result: String
+        - payout: Integer
+        - playedAt: DateTime
+        + setBet() void
+        + setResult() void
     }
     class ScratchOffTicket {
-        cost: Integer
-        prize: Integer
-        scratched: Boolean
+        - cost: Integer
+        - prize: Integer
+        - scratched: Boolean
+        + consumeTicket() void
     }
     class ExchangeTransaction {
-        virtualMoneyPaid: Decimal
-        chipsReceived: Integer
-        executedAt: DateTime
+        - virtualMoneyPaid: Decimal
+        - chipsReceived: Integer
+        - executedAt: DateTime
+        + setTransaction() void
     }
  
     Account "1" -- "0..*" GameRound : plays
