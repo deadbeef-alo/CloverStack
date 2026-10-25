@@ -1,0 +1,220 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="QMLmW3q6OUjaXI_NGmFI" name="Seite-1">
+    <mxGraphModel dx="978" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;\n@startuml\n\nhide circle\nskinparam linetype ortho\n\ntitle UC-05 - Play Scratch-Off Ticket\n\nclass ScratchOffForm {\n  playTicket(ticketId)\n  displayNotEnoughMoney()\n  displayResult(result, prize)\n  showResult()\n}\n\nclass ScratchOffController {\n  playTicket(ticketId)\n}\n\nclass ScratchOffService {\n  playScratchOffTicket(ticketId)\n}\n\nclass PlayerAccountRepository {\n  findByPlayerId()\n  save(account)\n}\n\nclass ScratchOffTicketRepository {\n  findById(ticketId)\n  save(ticket)\n}\n\nclass PlayerAccount {\n  virtualMoney: Decimal\n  chips: Integer\n  getVirtualMoney(): Decimal\n  deductVirtualMoney(amount)\n  addVirtualMoney(amount)\n  addChips(chipAmount)\n}\n\nclass ScratchOffTicket {\n  price: Decimal\n  getPrice(): Decimal\n  generateResult()\n  calculatePrize(result): Decimal\n}\n\nScratchOffForm ..&gt; ScratchOffController : HTTP Request\nScratchOffController --&gt; ScratchOffService\nScratchOffService --&gt; PlayerAccountRepository\nScratchOffService --&gt; ScratchOffTicketRepository\nPlayerAccountRepository ..&gt; PlayerAccount\nScratchOffTicketRepository ..&gt; ScratchOffTicket\n\n@enduml\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="Mwl7Tdvk-QSKEb_gS7uf-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="UC-05 - Play Scratch-Off Ticket" plantUmlId="cltitle_2" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;" plantUmlBaseValue="UC-05 - Play Scratch-Off Ticket" id="Mwl7Tdvk-QSKEb_gS7uf-2">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="24" width="237.6698" x="140.99009999999998" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="ScratchOffForm" plantUmlId="cls_3" plantUmlBaseStyle="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" plantUmlBaseValue="ScratchOffForm" id="Mwl7Tdvk-QSKEb_gS7uf-3">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-1" style="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" vertex="1">
+            <mxGeometry height="103.95999999999998" width="192.67" x="163.49" y="67" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="clssep_4" plantUmlBaseStyle="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-4">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-3" style="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" vertex="1">
+            <mxGeometry height="7.9999999999999964" width="192.67" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="playTicket(ticketId)" plantUmlId="mb_5" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="playTicket(ticketId)" id="Mwl7Tdvk-QSKEb_gS7uf-5">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-3" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="192.67" y="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="displayNotEnoughMoney()" plantUmlId="mb_6" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="displayNotEnoughMoney()" id="Mwl7Tdvk-QSKEb_gS7uf-6">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-3" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="192.67" y="54.489999999999995" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="displayResult(result, prize)" plantUmlId="mb_7" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="displayResult(result, prize)" id="Mwl7Tdvk-QSKEb_gS7uf-7">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-3" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="192.67" y="70.97999999999999" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="showResult()" plantUmlId="mb_8" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="showResult()" id="Mwl7Tdvk-QSKEb_gS7uf-8">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-3" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="192.67" y="87.46999999999998" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="ScratchOffController" plantUmlId="cls_9" plantUmlBaseStyle="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" plantUmlBaseValue="ScratchOffController" id="Mwl7Tdvk-QSKEb_gS7uf-9">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-1" style="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" vertex="1">
+            <mxGeometry height="54.489999999999995" width="150.6" x="184.52499999999998" y="253.45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="clssep_10" plantUmlBaseStyle="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-10">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-9" style="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" vertex="1">
+            <mxGeometry height="7.9999999999999964" width="150.6" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="playTicket(ticketId)" plantUmlId="mb_11" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="playTicket(ticketId)" id="Mwl7Tdvk-QSKEb_gS7uf-11">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-9" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="150.6" y="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="ScratchOffService" plantUmlId="cls_12" plantUmlBaseStyle="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" plantUmlBaseValue="ScratchOffService" id="Mwl7Tdvk-QSKEb_gS7uf-12">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-1" style="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" vertex="1">
+            <mxGeometry height="54.489999999999995" width="211.25" x="154.2" y="372.42999999999995" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="clssep_13" plantUmlBaseStyle="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-13">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-12" style="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" vertex="1">
+            <mxGeometry height="7.9999999999999964" width="211.25" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="playScratchOffTicket(ticketId)" plantUmlId="mb_14" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="playScratchOffTicket(ticketId)" id="Mwl7Tdvk-QSKEb_gS7uf-14">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-12" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="211.25" y="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="PlayerAccountRepository" plantUmlId="cls_15" plantUmlBaseStyle="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" plantUmlBaseValue="PlayerAccountRepository" id="Mwl7Tdvk-QSKEb_gS7uf-15">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-1" style="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" vertex="1">
+            <mxGeometry height="70.97999999999999" width="179.7" x="54.55000000000001" y="491.40999999999997" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="clssep_16" plantUmlBaseStyle="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-16">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-15" style="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" vertex="1">
+            <mxGeometry height="7.9999999999999964" width="179.7" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="findByPlayerId()" plantUmlId="mb_17" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="findByPlayerId()" id="Mwl7Tdvk-QSKEb_gS7uf-17">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-15" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="179.7" y="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="save(account)" plantUmlId="mb_18" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="save(account)" id="Mwl7Tdvk-QSKEb_gS7uf-18">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-15" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="179.7" y="54.489999999999995" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="ScratchOffTicketRepository" plantUmlId="cls_19" plantUmlBaseStyle="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" plantUmlBaseValue="ScratchOffTicketRepository" id="Mwl7Tdvk-QSKEb_gS7uf-19">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-1" style="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" vertex="1">
+            <mxGeometry height="70.97999999999999" width="195.85" x="269.25" y="491.40999999999997" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="clssep_20" plantUmlBaseStyle="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-20">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-19" style="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" vertex="1">
+            <mxGeometry height="7.9999999999999964" width="195.85" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="findById(ticketId)" plantUmlId="mb_21" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="findById(ticketId)" id="Mwl7Tdvk-QSKEb_gS7uf-21">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-19" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="195.85" y="38" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="save(ticket)" plantUmlId="mb_22" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="save(ticket)" id="Mwl7Tdvk-QSKEb_gS7uf-22">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-19" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="195.85" y="54.489999999999995" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="PlayerAccount" plantUmlId="cls_23" plantUmlBaseStyle="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" plantUmlBaseValue="PlayerAccount" id="Mwl7Tdvk-QSKEb_gS7uf-23">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-1" style="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" vertex="1">
+            <mxGeometry height="136.93999999999997" width="208.73" x="30" y="626.88" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="virtualMoney: Decimal" plantUmlId="mb_24" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="virtualMoney: Decimal" id="Mwl7Tdvk-QSKEb_gS7uf-24">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-23" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="208.73" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="chips: Integer" plantUmlId="mb_25" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="chips: Integer" id="Mwl7Tdvk-QSKEb_gS7uf-25">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-23" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="208.73" y="46.489999999999995" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="clssep_26" plantUmlBaseStyle="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-26">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-23" style="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" vertex="1">
+            <mxGeometry height="8" width="208.73" y="62.97999999999999" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="getVirtualMoney(): Decimal" plantUmlId="mb_27" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="getVirtualMoney(): Decimal" id="Mwl7Tdvk-QSKEb_gS7uf-27">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-23" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="208.73" y="70.97999999999999" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="deductVirtualMoney(amount)" plantUmlId="mb_28" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="deductVirtualMoney(amount)" id="Mwl7Tdvk-QSKEb_gS7uf-28">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-23" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="208.73" y="87.46999999999998" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="addVirtualMoney(amount)" plantUmlId="mb_29" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="addVirtualMoney(amount)" id="Mwl7Tdvk-QSKEb_gS7uf-29">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-23" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="208.73" y="103.95999999999998" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="addChips(chipAmount)" plantUmlId="mb_30" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="addChips(chipAmount)" id="Mwl7Tdvk-QSKEb_gS7uf-30">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-23" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="208.73" y="120.44999999999997" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="ScratchOffTicket" plantUmlId="cls_31" plantUmlBaseStyle="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" plantUmlBaseValue="ScratchOffTicket" id="Mwl7Tdvk-QSKEb_gS7uf-31">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-1" style="swimlane;collapsible=0;fontStyle=0;align=center;fontSize=14;fontColor=#000000;startSize=26.49;spacingLeft=0;fillColor=#F1F1F1;strokeColor=#181818;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;marginBottom=0;stackSpacing=0;marginTop=4;" vertex="1">
+            <mxGeometry height="103.95999999999998" width="215.92" x="273.73" y="643.37" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="price: Decimal" plantUmlId="mb_32" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="price: Decimal" id="Mwl7Tdvk-QSKEb_gS7uf-32">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-31" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="215.92" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="clssep_33" plantUmlBaseStyle="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-33">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-31" style="line;strokeWidth=0.5;strokeColor=#181818;fillColor=none;align=left;verticalAlign=middle;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;connectable=0;" vertex="1">
+            <mxGeometry height="8" width="215.92" y="46.489999999999995" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="getPrice(): Decimal" plantUmlId="mb_34" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="getPrice(): Decimal" id="Mwl7Tdvk-QSKEb_gS7uf-34">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-31" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="215.92" y="54.489999999999995" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="generateResult()" plantUmlId="mb_35" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="generateResult()" id="Mwl7Tdvk-QSKEb_gS7uf-35">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-31" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="215.92" y="70.97999999999999" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="calculatePrize(result): Decimal" plantUmlId="mb_36" plantUmlBaseStyle="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" plantUmlBaseValue="calculatePrize(result): Decimal" id="Mwl7Tdvk-QSKEb_gS7uf-36">
+          <mxCell parent="Mwl7Tdvk-QSKEb_gS7uf-31" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;fillColor=none;strokeColor=none;fontSize=14;fontColor=#000000;fontStyle=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="16.49" width="215.92" y="87.46999999999998" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="HTTP Request" plantUmlId="rel_37" plantUmlBaseStyle="dashed=1;endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=right;align=left;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="HTTP Request" id="Mwl7Tdvk-QSKEb_gS7uf-37">
+          <mxCell edge="1" parent="Mwl7Tdvk-QSKEb_gS7uf-1" source="Mwl7Tdvk-QSKEb_gS7uf-3" style="dashed=1;endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=right;align=left;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Mwl7Tdvk-QSKEb_gS7uf-9">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_38" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-38">
+          <mxCell edge="1" parent="Mwl7Tdvk-QSKEb_gS7uf-1" source="Mwl7Tdvk-QSKEb_gS7uf-9" style="endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Mwl7Tdvk-QSKEb_gS7uf-12">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_39" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.05;exitY=1;exitDx=0;exitDy=0;entryX=0.613;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-39">
+          <mxCell edge="1" parent="Mwl7Tdvk-QSKEb_gS7uf-1" source="Mwl7Tdvk-QSKEb_gS7uf-12" style="endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.05;exitY=1;exitDx=0;exitDy=0;entryX=0.613;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Mwl7Tdvk-QSKEb_gS7uf-15">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_40" plantUmlBaseStyle="endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.95;exitY=1;exitDx=0;exitDy=0;entryX=0.437;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-40">
+          <mxCell edge="1" parent="Mwl7Tdvk-QSKEb_gS7uf-1" source="Mwl7Tdvk-QSKEb_gS7uf-12" style="endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.95;exitY=1;exitDx=0;exitDy=0;entryX=0.437;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Mwl7Tdvk-QSKEb_gS7uf-19">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_41" plantUmlBaseStyle="dashed=1;endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.444;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-41">
+          <mxCell edge="1" parent="Mwl7Tdvk-QSKEb_gS7uf-1" source="Mwl7Tdvk-QSKEb_gS7uf-15" style="dashed=1;endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.444;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Mwl7Tdvk-QSKEb_gS7uf-23">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_42" plantUmlBaseStyle="dashed=1;endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.574;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="Mwl7Tdvk-QSKEb_gS7uf-42">
+          <mxCell edge="1" parent="Mwl7Tdvk-QSKEb_gS7uf-1" source="Mwl7Tdvk-QSKEb_gS7uf-19" style="dashed=1;endArrow=classic;endFill=1;endSize=8;html=1;strokeColor=#181818;fontColor=#000000;fontSize=13;exitX=0.574;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="Mwl7Tdvk-QSKEb_gS7uf-31">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

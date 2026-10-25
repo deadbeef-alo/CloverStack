@@ -38,6 +38,19 @@ The sequence diagram source file should be saved next to the image.
 
 Not applicable.
 
+### 2.5 Design classes
+
+| Analysis object (2.1) | Design class(es) |
+| --------------------- | ---------------- |
+| `:ScratchOffForm «boundary»` | `ScratchOffPage`, `ScratchOffController` |
+| `:PlayScratchOff «control»` | `ScratchOffService` |
+| `:PlayerAccount «entity»` | `PlayerAccount` |
+| `:ScratchOffTicket «entity»` | `ScratchOffTicket` |
+
+![Class diagram UCR-05](../diagrams/UCR-05_classes.drawio.png)
+
+![Sequence diagram UCR-05, design classes](../diagrams/UCR-05_sequence_design.drawio.png)
+
 ## 3 Derived requirements
 
 - DR-03-01 — A ticket can only be purchased if the player has enough virtual money.
