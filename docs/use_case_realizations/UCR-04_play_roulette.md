@@ -39,5 +39,18 @@ Like above mentioned, this realizes [UC-04 Play roulette](../use_cases/UC-04_Pla
 ### 2.4 State machine
 Not applicable.
 
+### 2.5 Design classes
+| Analysis object (2.1) | Design class(es) |
+| --------------------- | ---------------- |
+| [:RouletteHandler «boundary»] | [RoulettePage, RouletteController] |
+| [:BalanceHandler «boundary»] | [BalanceController] |
+| [:AccountHandler «control»] | [AccountService] |
+| [:Account «entity»] | [Account] |
+| [:Game «entity»] | [Game] |
+
+![Class diagram UCR-04](../diagrams/UCR-04_classes.png)
+
+![Sequence diagram UCR-04, design classes](../diagrams/UCR-04_sequence_design.png)
+
 ## 3 Derived requirements
 None.

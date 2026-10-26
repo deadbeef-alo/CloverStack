@@ -28,5 +28,16 @@ Like above mentioned, this realizes [UC-01 View account balance](../use_cases/UC
 ### 2.4 State machine
 Not applicable.
 
+### 2.5 Design classes
+| Analysis object (2.1) | Design class(es) |
+| --------------------- | ---------------- |
+| [:BalanceHandler «boundary»] | [BalancePage, BalanceController] |
+| [:AccountHandler «control»] | [AccountService] |
+| [:Account «entity»] | [Account] |
+
+![Class diagram UCR-01](../diagrams/UCR-01_classes.png)
+
+![Sequence diagram UCR-01, design classes](../diagrams/UCR-01_sequence_design.png)
+
 ## 3 Derived requirements
 None.
