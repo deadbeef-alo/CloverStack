@@ -111,32 +111,71 @@ by view, following the RUP template.
 
 ## 4 Use-case view
 
-*Author: [first name]*
-
-<!-- The use cases that matter most for your architecture — usually the ones you realized in
-     Task 4. Link your use case diagram instead of copying it. -->
+*Author: Adolfo*
 
 The use case diagram of the whole application is in [SRS 2.2](SRS.md#22-use-case-diagram). The
-use cases most important for the architecture are: […]
+use cases most important for the architecture are: UC-01, UC-02, UC-03, UC-04 and UC-05.
 
 ### 4.1 Use-case realizations
-
-<!-- One row per realization from Task 4. No new diagrams: link the files. -->
-
 | Use case | Realization | Author |
 | -------- | ----------- | ------ |
-| [UC-02 Book a room](use_cases/UC-02_[name].md) | [UCR-02](use_case_realizations/UCR-02_[name].md) | [first name] |
+| [UC-01 View account balance](use_cases/UC-01_View_account_balance.md) | [UCR-01](use_case_realizations/UCR-01_view_account_balance.md) | Adolfo |
+| [UC-02 Exchange Virtual Money for Chips](use_cases/UC-02_ExchangeMoney.md) | [UCR-02](use_case_realizations/UCR-02_Exchange_Money.md) | Adam |
+| [UC-03 Play slot machine](use_cases/UC-03_play-slot-machine.md) | [UCR-03](use_case_realizations/UCR-03_play-slot-machine.md) | Miriam |
+| [UC-04 Play roulette](use_cases/UC-04_Play_roulette.md) | [UCR-04](use_case_realizations/UCR-04_play_roulette.md) | Adolfo |
+| [UC-05 Play Scratch-Off Tickets](use_cases/UC-05_play_Scratch_off_Ticket.md) | [UCR-05](use_case_realizations/UCR-05_Scratch_off_Ticket.md) | Adam |
 
 ## 5 Logical view
 
 ### 5.1 Overview
 
-*Author: [first name]*
+*Author: Adolfo*
 
-<!-- Link your domain model from Task 5. If you have a package diagram, put it here: the
-     packages of your code and their dependencies, without cycles. -->
-
-The domain model is in [domain_model.md](domain_model.md). […]
+The domain model is in [domain_model.md](domain_model.md).
+```mermaid
+classDiagram
+    direction LR
+ 
+    class Account {
+        - username: String
+        - chips: Integer
+        - virtualMoney: Decimal
+        + getUsername() String
+        + getChips() Integer
+        + getVirtualMoney() Decimal
+    }
+    class Game {
+        - name: String
+        - minBet: Integer
+        - maxBet: Integer
+        + placeBet() void
+    }
+    class GameRound {
+        - bet: Integer
+        - result: String
+        - payout: Integer
+        - playedAt: DateTime
+        + setBet() void
+        + setResult() void
+    }
+    class ScratchOffTicket {
+        - cost: Integer
+        - prize: Integer
+        - scratched: Boolean
+        + consumeTicket() void
+    }
+    class ExchangeTransaction {
+        - virtualMoneyPaid: Decimal
+        - chipsReceived: Integer
+        - executedAt: DateTime
+        + setTransaction() void
+    }
+ 
+    Account "1" -- "0..*" GameRound : plays
+    Game "1" -- "0..*" GameRound : is played in
+    GameRound "1" -- "0..1" ScratchOffTicket : is played with
+    Account "1" -- "0..*" ExchangeTransaction : makes
+```
 
 ### 5.2 Architecturally significant design packages
 
@@ -157,7 +196,7 @@ The domain model is in [domain_model.md](domain_model.md). […]
 
 ## 7 Deployment view
 
-*Author: [first name]*
+*Author: Adam*
 
 <!-- One UML deployment diagram: nodes (devices, execution environments), the artifacts that
      run on them, and the communication paths with their protocol. Draw the setup you plan for
@@ -173,7 +212,7 @@ The domain model is in [domain_model.md](domain_model.md). […]
 
 ### 8.1 Overview
 
-*Author: [first name]*
+*Author: Adam*
 
 <!-- One UML component diagram of the whole application: frontend, backend, database, external
      services, and the interfaces between them (ball = provides, socket = requires). Two to five
