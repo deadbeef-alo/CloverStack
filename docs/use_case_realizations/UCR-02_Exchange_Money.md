@@ -36,6 +36,18 @@ The sequence diagram source file should be saved next to the image.
 
 Not applicable.
 
+### 2.5 Design classes
+
+| Analysis object (2.1) | Design class(es) |
+| --------------------- | ---------------- |
+| `:ExchangeForm «boundary»` | `ExchangePage`, `ExchangeController` |
+| `:ExchangeMoney «control»` | `ExchangeService` |
+| `:PlayerAccount «entity»` | `PlayerAccount` |
+
+![Class diagram UCR-02](../diagrams/UCR-02_classes.drawio.png)
+
+![Sequence diagram UCR-02, design classes](../diagrams/UCR-02_sequence_design.drawio.png)
+
 ## 3 Derived requirements
 
 - DR-02-01 — The exchange amount must be positive and valid.
