@@ -1,4 +1,4 @@
-# [Project Name] — Software Architecture Document
+# CloverStack — Software Architecture Document
 
 <!--
 HOW TO USE THIS TEMPLATE
@@ -14,9 +14,9 @@ HOW TO USE THIS TEMPLATE
   https://cin.ufpe.br/~if682/RUP/webtmpl/templates/a_and_d/rup_sad.htm
 -->
 
-| Team | Version | Last change |
-| ---- | ------- | ----------- |
-| CloverStack | 0.1     | 26.10.2026  |
+| Team        | Version | Last change |
+| ----------- | ------- | ----------- |
+| CloverStack | 0.1     | 29.10.2026  |
 
 The Git history of this file is the revision history.
 
@@ -35,50 +35,38 @@ The Git history of this file is the revision history.
 11. [Quality](#11-quality)
 
 ## 1 Introduction
-
 ### 1.1 Purpose
 
-*Author: [first name]*
+*Author: Miriam*
 
-<!-- One paragraph: what this document describes and who reads it — your team, the developer
-     who takes the project over, and the lecturer as investor. -->
-
-This document describes the architecture of [project name]: the parts the application is made
-of, how they are connected, and where they run. […]
-
+This document describes the architecture of CloverStack: the parts the application is made
+of, how they are connected, and where they run. CloverStack is a casino-style web application in which players use virtual chips to play slot machine, roulette games and scratch-off tickets. This document is written for the development team, for the lecturer and for anyone interested.
 ### 1.2 Scope
 
-*Author: [first name]*
+*Author: Miriam*
 
-<!-- One or two sentences: which software this document covers, e.g., the whole application
-     with frontend, backend, and database. The functional scope is in SRS 1.2 — link it. -->
-
-[…] The functional scope is described in [SRS 1.2](SRS.md#12-scope).
-
+This document covers the entire CloverStack application: the front end (TypeScript/React), which
+runs in the player's browser; the back end (TypeScript/Node.js with Express); and the SQLite
+database, as defined by the design constraints in [SRS 3.6](SRS.md#36-design-constraints). The only user is the player. The functional scope is described in [SRS 1.2](SRS.md#12-scope).
 ### 1.3 Definitions, acronyms and abbreviations
 
-*Author: [first name]*
+*Author: Miriam*
 
-<!-- Terms of the domain are in the SRS and in your domain model. Add only the technical terms
-     a reader of this document needs. -->
-
-| Term | Meaning |
-| ---- | ------- |
-| SAD | Software Architecture Document |
-| SRS | Software Requirements Specification |
-| UCR | Use-case realization |
-| [term] | [meaning] |
-
+| Term   | Meaning                             |
+| ------ | ----------------------------------- |
+| SAD    | Software Architecture Document      |
+| SRS    | Software Requirements Specification |
+| UCR    | Use-case realization                |
 ### 1.4 References
 
-*Author: [first name]*
+*Author: Miriam*
 
-| Title | Link |
-| ----- | ---- |
-| SRS | [SRS.md](SRS.md) |
-| Domain model | [domain_model.md](domain_model.md) |
-| Repository | [link] |
-| Board | [link to your GitHub Projects board] |
+| Title        | Link                                                      |
+| ------------ | --------------------------------------------------------- |
+| SRS          | [SRS.md](SRS.md)                                          |
+| Domain model | [domain_model.md](domain_model.md)                        |
+| Repository   | [Repository](https://github.com/deadbeef-alo/CloverStack) |
+| Board        | [Board](https://github.com/users/deadbeef-alo/projects/1) |
 
 ### 1.5 Overview
 
@@ -87,19 +75,20 @@ by view, following the RUP template.
 
 ## 2 Architectural representation
 
-*Author: [first name]*
+*Author: Miriam*
 
 <!-- Which views you use and which diagram shows each. The table is prefilled with the views of
      Lecture 6 — adjust it if you add or drop a view. Later lectures add your architectural
      style and your architecture decisions here. -->
 
-| View | Question it answers | Diagram | Section |
-| ---- | ------------------- | ------- | ------- |
-| Use-case view | What does the system do, and for whom? | Use case diagram, use-case realizations | 4 |
-| Logical view | Which classes, and how are they linked? | Class diagrams | 5 |
-| Process view | What runs at the same time? | Short description | 6 |
-| Deployment view | What runs where, and how is it connected? | Deployment diagram | 7 |
-| Implementation view | Which parts is the code made of? | Component diagram, package diagram | 8 |
+| View                | Question it answers                       | Diagram                                 | Section |
+| ------------------- | ----------------------------------------- | --------------------------------------- | ------- |
+| Use-case view       | What does the system do, and for whom?    | Use case diagram, use-case realizations | 4       |
+| Logical view        | Which classes, and how are they linked?   | Class diagrams                          | 5       |
+| Process view        | What runs at the same time?               | Short description                       | 6       |
+| Deployment view     | What runs where, and how is it connected? | Deployment diagram                      | 7       |
+| Implementation view | Which parts is the code made of?          | Component diagram, package diagram      | 8       |
+
 
 ## 3 Architectural goals and constraints
 
