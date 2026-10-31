@@ -167,21 +167,18 @@ classDiagram
 ```
 
 ### 5.2 Architecturally significant design packages
-
+n/a
 <!-- Optional for now. Link the design classes of your realizations (UCR section 2.5) or describe
      your most important packages in one sentence each. -->
 
-[…]
-
 ## 6 Process view
-
-*Author: [first name]*
+n/a
 
 <!-- Optional for now. One or two sentences: which processes run, e.g., the frontend in the
      browser, the backend, the database — and anything that runs in the background, such as a
      scheduled job. -->
 
-[…]
+
 
 ## 7 Deployment view
 
