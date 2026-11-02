@@ -202,11 +202,14 @@ classDiagram
      run on them, and the communication paths with their protocol. Draw the setup you plan for
      your final demo — or the one you use today, and say which. -->
 
-![Deployment diagram](diagrams/deployment.png)
+![Deployment diagram](../docs/diagrams/Deployment%20Diagram.drawio.png)
 
 | Node | What runs there | Connected to |
 | ---- | --------------- | ------------ |
-| [Server] | [backend, database] | [browser: HTTPS] |
+| Client (browser) | Frontend (React) | Server: HTTPS (REST API) |
+| Server | Backend API (Express), Game Services, Account Service, Persistence | Client (browser): HTTPS; Database: database connection |
+| Database server | Database | Server: database connection |
+
 
 ## 8 Implementation view
 
@@ -214,15 +217,17 @@ classDiagram
 
 *Author: Adam*
 
-<!-- One UML component diagram of the whole application: frontend, backend, database, external
-     services, and the interfaces between them (ball = provides, socket = requires). Two to five
-     components inside the backend are a good size. -->
 
-![Component diagram](diagrams/components.png)
+![Component diagram](../docs/diagrams/Component%20Diagram.drawio.png)
 
 | Component | Responsibility | Classes (Task 5) |
 | --------- | -------------- | ---------------- |
-| [Booking core] | [Books and cancels rooms] | [BookingService, Room, Booking] |
+| Frontend (React) | Displays the game and account views and sends user actions to the backend | [GameView, LoginForm] |
+| Backend API (Express) | Provides the REST API, validates requests and forwards them to the game services | [GameController, AccountController] |
+| Game Services | Implements the game logic and game operations | [GameService, Game, Player] |
+| Account Service | Manages accounts, including registration, login and account data | [AccountService, Account] |
+| Persistence | Provides data access and stores and loads data from the database | [AccountRepository, GameRepository] |
+| Database | Stores the persistent data | – |
 
 ### 8.2 Layers
 
