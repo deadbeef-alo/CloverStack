@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="_qcvKoUlg-nnEWr--nKT" name="Seite-1">
+    <mxGraphModel dx="978" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;\n@startuml\ntop to bottom direction\nskinparam monochrome true\nskinparam shadowing false\nskinparam linetype ortho\n\nnode \&quot;Developer Laptop\&quot; as Laptop {\n  node \&quot;Web Browser\&quot; as Browser {\n    artifact \&quot;React Frontend Build\&quot; as Frontend\n  }\n\n  node \&quot;Node.js Runtime\&quot; as Node {\n    artifact \&quot;Express Backend\&quot; as Backend\n  }\n\n  database \&quot;Database System\&quot; as DB {\n    artifact \&quot;Application Database Schema\&quot; as Schema\n  }\n}\n\nBrowser -down-&gt; Node : HTTP / REST\nNode -down-&gt; DB : Database Protocol / SQL\n\n@enduml\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="9rXZRcayJX13THEqPsLZ-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Developer Laptop" plantUmlId="c_0" plantUmlBaseStyle="shape=cube;size=10;flipH=1;fillColor=none;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=7;spacingRight=10;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" plantUmlBaseValue="Developer Laptop" id="9rXZRcayJX13THEqPsLZ-2">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-1" style="shape=cube;size=10;flipH=1;fillColor=none;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=7;spacingRight=10;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" vertex="1">
+            <mxGeometry height="162" width="728.0450000000001" x="30" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Web Browser" plantUmlId="c_1" plantUmlBaseStyle="shape=cube;size=10;flipH=1;fillColor=none;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=7;spacingRight=10;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" plantUmlBaseValue="Web Browser" id="9rXZRcayJX13THEqPsLZ-3">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-2" style="shape=cube;size=10;flipH=1;fillColor=none;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=7;spacingRight=10;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" vertex="1">
+            <mxGeometry height="96" width="204" x="15" y="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="React Frontend Build" plantUmlId="n_2" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#F1F1F1;strokeColor=#181818;fontSize=14;whiteSpace=wrap;spacingRight=10;spacingTop=2;shadow=0;" plantUmlBaseValue="React Frontend Build" id="9rXZRcayJX13THEqPsLZ-4">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-3" style="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#F1F1F1;strokeColor=#181818;fontSize=14;whiteSpace=wrap;spacingRight=10;spacingTop=2;shadow=0;" vertex="1">
+            <mxGeometry height="40" width="164" x="15" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="ci_3" plantUmlBaseStyle="shape=note;size=6;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;part=1;shadow=0;" plantUmlBaseValue="" id="9rXZRcayJX13THEqPsLZ-5">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-4" style="shape=note;size=6;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;part=1;shadow=0;" vertex="1">
+            <mxGeometry height="14" relative="1" width="12" x="1" as="geometry">
+              <mxPoint x="-17" y="5" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Node.js Runtime" plantUmlId="c_4" plantUmlBaseStyle="shape=cube;size=10;flipH=1;fillColor=none;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=7;spacingRight=10;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" plantUmlBaseValue="Node.js Runtime" id="9rXZRcayJX13THEqPsLZ-6">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-2" style="shape=cube;size=10;flipH=1;fillColor=none;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=7;spacingRight=10;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" vertex="1">
+            <mxGeometry height="96" width="184.04500000000002" x="243" y="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Express Backend" plantUmlId="n_5" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#F1F1F1;strokeColor=#181818;fontSize=14;whiteSpace=wrap;spacingRight=10;spacingTop=2;shadow=0;" plantUmlBaseValue="Express Backend" id="9rXZRcayJX13THEqPsLZ-7">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-6" style="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#F1F1F1;strokeColor=#181818;fontSize=14;whiteSpace=wrap;spacingRight=10;spacingTop=2;shadow=0;" vertex="1">
+            <mxGeometry height="40" width="143" x="15.522500000000008" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="ci_6" plantUmlBaseStyle="shape=note;size=6;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;part=1;shadow=0;" plantUmlBaseValue="" id="9rXZRcayJX13THEqPsLZ-8">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-7" style="shape=note;size=6;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;part=1;shadow=0;" vertex="1">
+            <mxGeometry height="14" relative="1" width="12" x="1" as="geometry">
+              <mxPoint x="-17" y="5" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Database System" plantUmlId="c_7" plantUmlBaseStyle="shape=cylinder3;size=10;boundedLbl=1;backgroundOutline=1;fillColor=none;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=-4;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" plantUmlBaseValue="Database System" id="9rXZRcayJX13THEqPsLZ-9">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-2" style="shape=cylinder3;size=10;boundedLbl=1;backgroundOutline=1;fillColor=none;strokeColor=#181818;verticalAlign=top;align=center;spacingTop=-4;fontSize=14;fontStyle=1;whiteSpace=wrap;shadow=0;" vertex="1">
+            <mxGeometry height="106" width="252" x="451.045" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Application Database Schema" plantUmlId="n_8" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#F1F1F1;strokeColor=#181818;fontSize=14;whiteSpace=wrap;spacingRight=10;spacingTop=2;shadow=0;" plantUmlBaseValue="Application Database Schema" id="9rXZRcayJX13THEqPsLZ-10">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-9" style="rounded=1;absoluteArcSize=1;arcSize=5;fillColor=#F1F1F1;strokeColor=#181818;fontSize=14;whiteSpace=wrap;spacingRight=10;spacingTop=2;shadow=0;" vertex="1">
+            <mxGeometry height="40" width="219" x="16.5" y="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="ci_9" plantUmlBaseStyle="shape=note;size=6;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;part=1;shadow=0;" plantUmlBaseValue="" id="9rXZRcayJX13THEqPsLZ-11">
+          <mxCell parent="9rXZRcayJX13THEqPsLZ-10" style="shape=note;size=6;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;part=1;shadow=0;" vertex="1">
+            <mxGeometry height="14" relative="1" width="12" x="1" as="geometry">
+              <mxPoint x="-17" y="5" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="HTTP / REST" plantUmlId="e_10" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=13;html=1;labelBackgroundColor=#FFFFFF;verticalAlign=bottom;endArrow=classicThin;endFill=1;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="HTTP / REST" id="9rXZRcayJX13THEqPsLZ-12">
+          <mxCell edge="1" parent="9rXZRcayJX13THEqPsLZ-2" source="9rXZRcayJX13THEqPsLZ-3" style="strokeColor=#181818;fontColor=#000000;fontSize=13;html=1;labelBackgroundColor=#FFFFFF;verticalAlign=bottom;endArrow=classicThin;endFill=1;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="9rXZRcayJX13THEqPsLZ-6">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Database Protocol / SQL" plantUmlId="e_11" plantUmlBaseStyle="strokeColor=#181818;fontColor=#000000;fontSize=13;html=1;labelBackgroundColor=#FFFFFF;verticalAlign=bottom;endArrow=classicThin;endFill=1;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Database Protocol / SQL" id="9rXZRcayJX13THEqPsLZ-13">
+          <mxCell edge="1" parent="9rXZRcayJX13THEqPsLZ-2" source="9rXZRcayJX13THEqPsLZ-6" style="strokeColor=#181818;fontColor=#000000;fontSize=13;html=1;labelBackgroundColor=#FFFFFF;verticalAlign=bottom;endArrow=classicThin;endFill=1;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="9rXZRcayJX13THEqPsLZ-9">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

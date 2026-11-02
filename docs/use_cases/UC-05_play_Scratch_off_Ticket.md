@@ -1,5 +1,5 @@
 
-# UC-01: Play Scratch-Off Tickets
+# UC-05: Play Scratch-Off Tickets
 
 ## 1. Brief Description
 This use case describes how a player plays a scratch-off ticket to win chips.
