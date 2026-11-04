@@ -159,22 +159,24 @@ Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentenc
 
 Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentence why].
 
-#### QS-03 [Name]
+#### QS-03 Browser compatibility
 
-| QS-03 [Name]     | *Author: [first name]* · Refines [NFR-ID] |
+| QS-03 Browser compatibility | *Author: Adolfo* · Refines NFR-S-01 |
 | ---------------- | ----------------------------------------- |
-| Source           | [who or what triggers it]                 |
-| Stimulus         | [what arrives at the system]              |
-| Artifact         | [which part of the system is hit]         |
-| Environment      | [in which state the system is]            |
-| Response         | [what the system does]                    |
-| Response measure | [the number that tells you it worked]     |
+| Source           | A player                 |
+| Stimulus         | Accesses to any function of the game              |
+| Artifact         | The whole frontend         |
+| Environment      | Normal operation            |
+| Response         | Runs without bugs related to the browser |
+| Response measure | One test per browser without any issues |
 
-Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentence why].
+Business value M: If the application isn't compatible in their favorite browser, they may try to avoid using it instead of looking for a replacement.
+
+Technical risk M: We could do it manually or automatize it with tools like Playwright.
 
 ### 3.2 Constraints
 
-*Author: [first name]*
+*Author: Adolfo*
 
 <!-- At least three. Kinds: technical, organizational, economic, legal.
      Your stack is in SRS 3.6 — link it instead of copying it. -->
