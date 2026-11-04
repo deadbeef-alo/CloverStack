@@ -42,10 +42,10 @@ classDiagram
         + setTransaction() void
     }
  
-    Account "1" -- "0..*" GameRound : plays
-    Game "1" -- "0..*" GameRound : is played in
-    GameRound "1" -- "0..1" ScratchOffTicket : is played with
-    Account "1" -- "0..*" ExchangeTransaction : makes
+    Account "1" -- "0..*" GameRound
+    Game "1" -- "0..*" GameRound
+    GameRound "1" -- "0..1" ScratchOffTicket
+    Account "1" -- "0..*" ExchangeTransaction
 ```
 ## Classes
 | Class | Meaning |
