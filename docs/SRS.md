@@ -59,11 +59,11 @@ _Author: Adam_
 
 _Author: Miriam_
 
-| Title      | Link                                                                                                               |
-| ---------- | ------------------------------------------------------------------------------------------------------------------ |
-| Blog       | [https://github.com/deadbeef-alo/CloverStack/discussions](https://github.com/deadbeef-alo/CloverStack/discussions) |
-| Board      | [https://github.com/users/deadbeef-alo/projects/1](https://github.com/users/deadbeef-alo/projects/1)               |
-| Repository | [https://github.com/deadbeef-alo/CloverStack](https://github.com/deadbeef-alo/CloverStack)                         |
+| Title      | Link                                                            |
+| ---------- | --------------------------------------------------------------- |
+| Blog       | [Blog](https://github.com/deadbeef-alo/CloverStack/discussions) |
+| Board      | [Board](https://github.com/users/deadbeef-alo/projects/1)       |
+| Repository | [Repository](https://github.com/deadbeef-alo/CloverStack)       |
 
 ### 1.5 Overview
 
