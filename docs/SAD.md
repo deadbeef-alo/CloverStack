@@ -95,11 +95,87 @@ _Author: Miriam_
 
 ## 3 Architectural goals and constraints
 
-<!-- Lecture 7. The requirements and constraints that shape your architecture: quality goals
-     such as availability or security, and constraints such as your stack (SRS 3.6), your team
-     size, or your schedule. Leave this section as it is until then. -->
+<!--
+TASK 7 — paste this over section 3 of your SAD.md, which still says "Follows with Lecture 7".
+- Replace every [placeholder] in square brackets. Comments like this one are invisible on GitHub;
+  delete them once a part is done.
+- One scenario per member: copy the QS block once per scenario and put your name on it.
+- Worked examples for every part: Task 7, and Lecture 7, slides 14 to 25.
+-->
 
-_Follows with Lecture 7._
+Section 3 lists the requirements that shape our architecture: our quality goals as scenarios,
+rated by business value and technical risk, and the constraints we have to design around. How the
+architecture reaches each scenario follows in section 11.
+
+### 3.1 Quality goals
+
+_Author: [first name]_
+
+<!-- The utility tree as a table. One row per scenario. Value and risk: H, M or L.
+     The short form: stimulus → response measure. -->
+
+| ID    | Quality   | Refinement   | Scenario, short                 | Value | Risk | Author       |
+| ----- | --------- | ------------ | ------------------------------- | :---: | :--: | ------------ |
+| QS-01 | [quality] | [refinement] | [stimulus] → [response measure] |  [H]  | [L]  | [first name] |
+| QS-02 | [quality] | [refinement] | [stimulus] → [response measure] |  [H]  | [M]  | [first name] |
+| QS-03 | [quality] | [refinement] | [stimulus] → [response measure] |  [M]  | [M]  | [first name] |
+
+[One or two sentences: which scenario comes first, and why. (H, H) comes before everything else.]
+
+#### QS-01 Tutorial for the games
+_Author: Miriam_
+
+| QS-01 Tutorial for the games | _Author: Miriam_ · Refines NFR-U-01                                                                           |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Source                       | A first-time player who has never used CloverStack or never played any of the games.                          |
+| Stimulus                     | Open a game mode (slot machine, roulette or scratch-off ticket)                                               |
+| Artifact                     | Frontend (available with an extra button in each game side)                                                   |
+| Environment                  | Normal operation                                                                                              |
+| Response                     | Shows a short tutorial that explains the basics of current game                                               |
+| Response measure             | 9 of 10 test users who did not know the game before, get how it works after the tutorial and can play a round |
+
+Business value M: CloverStack is built for entertainment, so players who do not understand a game leave, but casino fans already know the basic rules of most games. 
+
+Technical risk L: the tutorial is static content inside the frontend, so no other component is involved.
+
+#### QS-02 [Name]
+
+| QS-02 [Name]     | _Author: [first name]_ · Refines [NFR-ID] |
+| ---------------- | ----------------------------------------- |
+| Source           | [who or what triggers it]                 |
+| Stimulus         | [what arrives at the system]              |
+| Artifact         | [which part of the system is hit]         |
+| Environment      | [in which state the system is]            |
+| Response         | [what the system does]                    |
+| Response measure | [the number that tells you it worked]     |
+
+Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentence why].
+
+#### QS-03 [Name]
+
+| QS-03 [Name]     | _Author: [first name]_ · Refines [NFR-ID] |
+| ---------------- | ----------------------------------------- |
+| Source           | [who or what triggers it]                 |
+| Stimulus         | [what arrives at the system]              |
+| Artifact         | [which part of the system is hit]         |
+| Environment      | [in which state the system is]            |
+| Response         | [what the system does]                    |
+| Response measure | [the number that tells you it worked]     |
+
+Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentence why].
+
+### 3.2 Constraints
+
+_Author: [first name]_
+
+<!-- At least three. Kinds: technical, organizational, economic, legal.
+     Your stack is in SRS 3.6 — link it instead of copying it. -->
+
+| ID   | Kind           | Constraint                                               | What it means for our architecture |
+| ---- | -------------- | -------------------------------------------------------- | ---------------------------------- |
+| C-01 | Technical      | [our stack, see [SRS 3.6](SRS.md#36-design-constraints)] | [consequence]                      |
+| C-02 | Organizational | [team size, time]                                        | [consequence]                      |
+| C-03 | [kind]         | [constraint]                                             | [consequence]                      |
 
 ## 4 Use-case view
 
