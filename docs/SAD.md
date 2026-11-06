@@ -138,18 +138,20 @@ architecture reaches each scenario follows in section 11.
 
 Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentence why].
 
-#### QS-02 [Name]
+#### QS-02 Consistent Data Storage
 
-| QS-02 [Name]     | *Author: [first name]* · Refines [NFR-ID] |
+| QS-02 Consistent Data Storage | *Author: Adam* · Refines NFR-R-01 |
 | ---------------- | ----------------------------------------- |
-| Source           | [who or what triggers it]                 |
-| Stimulus         | [what arrives at the system]              |
-| Artifact         | [which part of the system is hit]         |
-| Environment      | [in which state the system is]            |
-| Response         | [what the system does]                    |
-| Response measure | [the number that tells you it worked]     |
+| Source           | System, Player  |
+| Stimulus         | A Player places a bet              |
+| Artifact         | Backend, DataBase         |
+| Environment      | Normal operation            |
+| Response         | The system needs to store data consistently |
+| Response measure | 0 lost or duplicated transactions and 100% data consistency after system recovery.   |
 
-Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentence why].
+Business value H: Data consistency is critical because losing or corrupting player transactions can lead to incorrect game results.
+
+Technical risk H: Ensuring data consistency during unexpected system crashes is technically challenging because incomplete transactions could result in lost, duplicated or corrupted data.
 
 #### QS-03 Browser compatibility
 
