@@ -109,45 +109,44 @@ architecture reaches each scenario follows in section 11.
 
 ### 3.1 Quality goals
 
-*Author: [first name]*
+_Author: [first name]_
 
 <!-- The utility tree as a table. One row per scenario. Value and risk: H, M or L.
      The short form: stimulus → response measure. -->
 
-| ID    | Quality   | Refinement   | Scenario, short                | Value | Risk | Author       |
-| ----- | --------- | ------------ | ------------------------------ | :---: | :--: | ------------ |
-| QS-01 | [quality] | [refinement] | [stimulus] → [response measure] | [H]   | [L]  | [first name] |
-| QS-02 | [quality] | [refinement] | [stimulus] → [response measure] | [H]   | [M]  | [first name] |
-| QS-03 | [quality] | [refinement] | [stimulus] → [response measure] | [M]   | [M]  | [first name] |
+| ID    | Quality   | Refinement   | Scenario, short                                                                                              | Value | Risk | Author       |
+| ----- | --------- | ------------ | ------------------------------------------------------------------------------------------------------------ | :---: | :--: | ------------ |
+| QS-01 | Usability | Learnability | A first-time player opens a game mode → 9 of 10 test users play a full round of that game after the tutorial |   M   |  L   | Miriam       |
+| QS-02 | [quality] | [refinement] | [stimulus] → [response measure]                                                                              |  [H]  | [M]  | [first name] |
+| QS-03 | [quality] | [refinement] | [stimulus] → [response measure]                                                                              |  [M]  | [M]  | [first name] |
 
 [One or two sentences: which scenario comes first, and why. (H, H) comes before everything else.]
 
-#### QS-01 [Name]
+#### QS-01 Tutorial for the games
 
-<!-- Start from the sentence in your SRS (3.2 to 3.5) and name every part.
-     The artifact is a component from your component diagram (section 8). -->
+| QS-01 Tutorial for the games | _Author: Miriam_ · Refines NFR-U-01                                                                           |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Source                       | A first-time player who has never used CloverStack or never played any of the games.                          |
+| Stimulus                     | Open a game mode (slot machine, roulette or scratch-off ticket)                                               |
+| Artifact                     | Frontend (available with an extra button in each game side)                                                   |
+| Environment                  | Normal operation                                                                                              |
+| Response                     | Shows a short tutorial that explains the basics of current game                                               |
+| Response measure             | 9 of 10 test users who did not know the game before, get how it works after the tutorial and can play a round |
 
-| QS-01 [Name]     | *Author: [first name]* · Refines [NFR-ID] |
-| ---------------- | ----------------------------------------- |
-| Source           | [who or what triggers it]                 |
-| Stimulus         | [what arrives at the system]              |
-| Artifact         | [which part of the system is hit]         |
-| Environment      | [in which state the system is]            |
-| Response         | [what the system does]                    |
-| Response measure | [the number that tells you it worked]     |
+Business value M: CloverStack is built for entertainment, so players who do not understand a game leave, but casino fans already know the basic rules of most games.
 
-Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentence why].
+Technical risk L: the tutorial is static content inside the frontend, so no other component is involved.
 
 #### QS-02 Consistent Data Storage
 
-| QS-02 Consistent Data Storage | *Author: Adam* · Refines NFR-R-01 |
-| ---------------- | ----------------------------------------- |
-| Source           | System, Player  |
-| Stimulus         | A Player places a bet              |
-| Artifact         | Backend, DataBase         |
-| Environment      | Normal operation            |
-| Response         | The system needs to store data consistently |
-| Response measure | 0 lost or duplicated transactions and 100% data consistency after system recovery.   |
+| QS-02 Consistent Data Storage | _Author: Adam_ · Refines NFR-R-01                                                    |
+| ----------------------------- | ------------------------------------------------------------------------------------ |
+| Source                        | System, Player                                                                       |
+| Stimulus                      | A Player places a bet                                                                |
+| Artifact                      | Backend, DataBase                                                                    |
+| Environment                   | Normal operation                                                                     |
+| Response                      | The system needs to store data consistently                                          |
+| Response measure              | 0 lost or duplicated transactions and 100% data consistency after system recovery.   |
 
 Business value H: Data consistency is critical because losing or corrupting player transactions can lead to incorrect game results.
 
@@ -155,14 +154,14 @@ Technical risk H: Ensuring data consistency during unexpected system crashes is 
 
 #### QS-03 Browser compatibility
 
-| QS-03 Browser compatibility | *Author: Adolfo* · Refines NFR-S-01 |
-| ---------------- | ----------------------------------------- |
-| Source           | A player                 |
-| Stimulus         | Accesses to any function of the game              |
-| Artifact         | The whole frontend         |
-| Environment      | Normal operation            |
-| Response         | Runs without bugs related to the browser |
-| Response measure | One test per browser without any issues |
+| QS-03 Browser compatibility | _Author: Adolfo_ · Refines NFR-S-01      |
+| --------------------------- | ---------------------------------------- |
+| Source                      | A player                                 |
+| Stimulus                    | Accesses to any function of the game     |
+| Artifact                    | The whole frontend                       |
+| Environment                 | Normal operation                         |
+| Response                    | Runs without bugs related to the browser |
+| Response measure            | One test per browser without any issues  |
 
 Business value M: If the application isn't compatible in their favorite browser, they may try to avoid using it instead of looking for a replacement.
 
@@ -170,17 +169,16 @@ Technical risk M: We could do it manually or automatize it with tools like Playw
 
 ### 3.2 Constraints
 
-*Author: Adolfo*
+_Author: Adolfo_
 
 <!-- At least three. Kinds: technical, organizational, economic, legal.
      Your stack is in SRS 3.6 — link it instead of copying it. -->
 
-| ID   | Kind           | Constraint                               | What it means for our architecture |
-| ---- | -------------- | ---------------------------------------- | ---------------------------------- |
-| C-01 | Technical      | [our stack, see [SRS 3.6](SRS.md#36-design-constraints)] | [consequence] |
-| C-02 | Organizational | [team size, time]                        | [consequence]                      |
-| C-03 | [kind]         | [constraint]                             | [consequence]                      |
-
+| ID   | Kind           | Constraint                                               | What it means for our architecture |
+| ---- | -------------- | -------------------------------------------------------- | ---------------------------------- |
+| C-01 | Technical      | [our stack, see [SRS 3.6](SRS.md#36-design-constraints)] | [consequence]                      |
+| C-02 | Organizational | [team size, time]                                        | [consequence]                      |
+| C-03 | [kind]         | [constraint]                                             | [consequence]                      |
 
 ## 4 Use-case view
 
