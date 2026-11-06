@@ -133,7 +133,7 @@ _Author: [first name]_
 | Response                     | Shows a short tutorial that explains the basics of current game                                               |
 | Response measure             | 9 of 10 test users who did not know the game before, get how it works after the tutorial and can play a round |
 
-Business value M: CloverStack is built for entertainment, so players who do not understand a game leave, but casino fans already know the basic rules of most games. 
+Business value M: CloverStack is built for entertainment, so players who do not understand a game leave, but casino fans already know the basic rules of most games.
 
 Technical risk L: the tutorial is static content inside the frontend, so no other component is involved.
 
