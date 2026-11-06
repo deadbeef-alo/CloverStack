@@ -95,11 +95,92 @@ _Author: Miriam_
 
 ## 3 Architectural goals and constraints
 
-<!-- Lecture 7. The requirements and constraints that shape your architecture: quality goals
-     such as availability or security, and constraints such as your stack (SRS 3.6), your team
-     size, or your schedule. Leave this section as it is until then. -->
+<!--
+TASK 7 — paste this over section 3 of your SAD.md, which still says "Follows with Lecture 7".
+- Replace every [placeholder] in square brackets. Comments like this one are invisible on GitHub;
+  delete them once a part is done.
+- One scenario per member: copy the QS block once per scenario and put your name on it.
+- Worked examples for every part: Task 7, and Lecture 7, slides 14 to 25.
+-->
 
-_Follows with Lecture 7._
+Section 3 lists the requirements that shape our architecture: our quality goals as scenarios,
+rated by business value and technical risk, and the constraints we have to design around. How the
+architecture reaches each scenario follows in section 11.
+
+### 3.1 Quality goals
+
+*Author: [first name]*
+
+<!-- The utility tree as a table. One row per scenario. Value and risk: H, M or L.
+     The short form: stimulus → response measure. -->
+
+| ID    | Quality   | Refinement   | Scenario, short                | Value | Risk | Author       |
+| ----- | --------- | ------------ | ------------------------------ | :---: | :--: | ------------ |
+| QS-01 | [quality] | [refinement] | [stimulus] → [response measure] | [H]   | [L]  | [first name] |
+| QS-02 | [quality] | [refinement] | [stimulus] → [response measure] | [H]   | [M]  | [first name] |
+| QS-03 | [quality] | [refinement] | [stimulus] → [response measure] | [M]   | [M]  | [first name] |
+
+[One or two sentences: which scenario comes first, and why. (H, H) comes before everything else.]
+
+#### QS-01 [Name]
+
+<!-- Start from the sentence in your SRS (3.2 to 3.5) and name every part.
+     The artifact is a component from your component diagram (section 8). -->
+
+| QS-01 [Name]     | *Author: [first name]* · Refines [NFR-ID] |
+| ---------------- | ----------------------------------------- |
+| Source           | [who or what triggers it]                 |
+| Stimulus         | [what arrives at the system]              |
+| Artifact         | [which part of the system is hit]         |
+| Environment      | [in which state the system is]            |
+| Response         | [what the system does]                    |
+| Response measure | [the number that tells you it worked]     |
+
+Business value [H/M/L]: [one sentence why]. Technical risk [H/M/L]: [one sentence why].
+
+#### QS-02 Consistent Data Storage
+
+| QS-02 Consistent Data Storage | *Author: Adam* · Refines NFR-R-01 |
+| ---------------- | ----------------------------------------- |
+| Source           | System, Player  |
+| Stimulus         | A Player places a bet              |
+| Artifact         | Backend, DataBase         |
+| Environment      | Normal operation            |
+| Response         | The system needs to store data consistently |
+| Response measure | 0 lost or duplicated transactions and 100% data consistency after system recovery.   |
+
+Business value H: Data consistency is critical because losing or corrupting player transactions can lead to incorrect game results.
+
+Technical risk H: Ensuring data consistency during unexpected system crashes is technically challenging because incomplete transactions could result in lost, duplicated or corrupted data.
+
+#### QS-03 Browser compatibility
+
+| QS-03 Browser compatibility | *Author: Adolfo* · Refines NFR-S-01 |
+| ---------------- | ----------------------------------------- |
+| Source           | A player                 |
+| Stimulus         | Accesses to any function of the game              |
+| Artifact         | The whole frontend         |
+| Environment      | Normal operation            |
+| Response         | Runs without bugs related to the browser |
+| Response measure | One test per browser without any issues |
+
+Business value M: If the application isn't compatible in their favorite browser, they may try to avoid using it instead of looking for a replacement.
+
+Technical risk M: We could do it manually or automatize it with tools like Playwright.
+
+### 3.2 Constraints
+
+*Author: Adolfo*
+
+<!-- At least three. Kinds: technical, organizational, economic, legal.
+     Your stack is in SRS 3.6 — link it instead of copying it. -->
+
+| ID   | Kind           | Constraint                               | What it means for our architecture |
+| ---- | -------------- | ---------------------------------------- | ---------------------------------- |
+| C-01 | Technical      | [our stack, see [SRS 3.6](SRS.md#36-design-constraints)] | [consequence] |
+| C-02 | Organizational | [team size, time]                        | [consequence]                      |
+| C-03 | [kind]         | [constraint]                             | [consequence]                      |
+
 
 ## 4 Use-case view
 
