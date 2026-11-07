@@ -109,7 +109,7 @@ architecture reaches each scenario follows in section 11.
 
 ### 3.1 Quality goals
 
-_Author: Miriam, Adam, Adolfo_
+_Author: Adolfo, Miriam_
 
 <!-- The utility tree as a table. One row per scenario. Value and risk: H, M or L.
      The short form: stimulus → response measure. -->
@@ -117,7 +117,7 @@ _Author: Miriam, Adam, Adolfo_
 | ID    | Quality   | Refinement   | Scenario, short                                                                                              | Value | Risk | Author       |
 | ----- | --------- | ------------ | ------------------------------------------------------------------------------------------------------------ | :---: | :--: | ------------ |
 | QS-01 | Usability | Learnability | A first-time player opens a game mode → 9 of 10 test users play a full round of that game after the tutorial |   M   |  L   | Miriam       |
-| QS-02 | [quality] | [refinement] | [stimulus] → [response measure]                                                                              |  [H]  | [M]  | [first name] |
+| QS-02 | Reliability | Consistency and recovery | A player places a bet → 0 lost or duplicated transactions even when error | H | H | Adam |
 | QS-03 | Supportability | Compatibility | Access to any function of the game → One test per browser without any issue |  M  | M | Adolfo |
 
 #### QS-01 Tutorial for the games
@@ -169,14 +169,11 @@ Technical risk M: We could do it manually or automatize it with tools like Playw
 
 _Author: Adolfo_
 
-<!-- At least three. Kinds: technical, organizational, economic, legal.
-     Your stack is in SRS 3.6 — link it instead of copying it. -->
-
 | ID   | Kind           | Constraint                                               | What it means for our architecture |
 | ---- | -------------- | -------------------------------------------------------- | ---------------------------------- |
-| C-01 | Technical      | [our stack, see [SRS 3.6](SRS.md#36-design-constraints)] | [consequence]                      |
-| C-02 | Organizational | [team size, time]                                        | [consequence]                      |
-| C-03 | [kind]         | [constraint]                                             | [consequence]                      |
+| C-01 | Technical      | Frontend and backend uses TypeScript. SQLite DB as database [SRS 3.6](SRS.md#36-design-constraints) | One language on both sides. But Backend will use Express and Node.js. |
+| C-02 | Organizational | Four/three members with very limited time | We will ensure the components are of an acceptable quality, nothing more. |
+| C-03 | Economic | We should not spend money on anything as we don't have budget | Only free tier platforms will be used |
 
 ## 4 Use-case view
 
