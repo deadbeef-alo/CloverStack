@@ -109,7 +109,7 @@ architecture reaches each scenario follows in section 11.
 
 ### 3.1 Quality goals
 
-_Author: [first name]_
+_Author: Miriam, Adam, Adolfo_
 
 <!-- The utility tree as a table. One row per scenario. Value and risk: H, M or L.
      The short form: stimulus → response measure. -->
@@ -118,9 +118,7 @@ _Author: [first name]_
 | ----- | --------- | ------------ | ------------------------------------------------------------------------------------------------------------ | :---: | :--: | ------------ |
 | QS-01 | Usability | Learnability | A first-time player opens a game mode → 9 of 10 test users play a full round of that game after the tutorial |   M   |  L   | Miriam       |
 | QS-02 | [quality] | [refinement] | [stimulus] → [response measure]                                                                              |  [H]  | [M]  | [first name] |
-| QS-03 | [quality] | [refinement] | [stimulus] → [response measure]                                                                              |  [M]  | [M]  | [first name] |
-
-[One or two sentences: which scenario comes first, and why. (H, H) comes before everything else.]
+| QS-03 | Supportability | Compatibility | Access to any function of the game → One test per browser without any issue |  M  | M | Adolfo |
 
 #### QS-01 Tutorial for the games
 
