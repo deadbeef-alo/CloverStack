@@ -81,10 +81,6 @@ by view, following the RUP template.
 
 _Author: Miriam_
 
-<!-- Which views you use and which diagram shows each. The table is prefilled with the views of
-     Lecture 6 — adjust it if you add or drop a view. Later lectures add your architectural
-     style and your architecture decisions here. -->
-
 | View                | Question it answers                       | Diagram                                 | Section |
 | ------------------- | ----------------------------------------- | --------------------------------------- | ------- |
 | Use-case view       | What does the system do, and for whom?    | Use case diagram, use-case realizations | 4       |
@@ -93,15 +89,52 @@ _Author: Miriam_
 | Deployment view     | What runs where, and how is it connected? | Deployment diagram                      | 7       |
 | Implementation view | Which parts is the code made of?          | Component diagram, package diagram      | 8       |
 
-## 3 Architectural goals and constraints
-
 <!--
-TASK 7 — paste this over section 3 of your SAD.md, which still says "Follows with Lecture 7".
+TASK 8 — two blocks for your SAD.md.
+- Block 2.1: paste it into section 2, below the table of views.
+- Block 8.2: paste it over section 8.2, which still says "Follows with Lectures 8 and 9".
 - Replace every [placeholder] in square brackets. Comments like this one are invisible on GitHub;
   delete them once a part is done.
-- One scenario per member: copy the QS block once per scenario and put your name on it.
-- Worked examples for every part: Task 7, and Lecture 7, slides 14 to 25.
+- Worked examples for both blocks: Task 8, and Lecture 8, slides 10 to 14 and 24 to 27.
 -->
+
+### 2.1 Architectural style
+
+*Author: [first name]*
+
+<!-- Three short paragraphs, together rarely longer than half a page.
+     Every reason names a scenario or a constraint from section 3 by its ID. -->
+
+**Main style.** [Our backend is a … : one sentence on the main style and where it applies.]
+[Where we deviate from it, e.g., client-server between browser and backend, an event for mails.]
+
+**Why.** (1) [reason with an ID, e.g., C-02 or QS-02, and what the style does for it].
+(2) [reason with an ID]. (3) [optional: a third reason].
+
+**Rejected alternative.** [The style we considered], which would have given us [its strength].
+We did not choose it because [reason with an ID]. [Optional: when we would decide differently.]
+
+<!--
+TASK 9 — two blocks for your SAD.md.
+- Block 2.2: paste it into section 2, below section 2.1 from Task 8.
+- Block 11: paste it over section 11, which still says "Follows with Lectures 7 to 9".
+- Replace every [placeholder] in square brackets. Comments like this one are invisible on GitHub;
+  delete them once a part is done.
+- Worked examples for both blocks: Task 9, and Lecture 9, slides 13 to 20 and 24 to 28.
+-->
+
+### 2.2 Architecture decisions
+
+*Author: [first name]*
+
+<!-- One row per ADR in docs/decisions/. An accepted ADR is not rewritten: a new decision gets a
+     new ADR, and the old one gets the status "superseded by ADR-xx". -->
+
+| ADR    | Decision                                                  | Status     | Date         |
+| ------ | --------------------------------------------------------- | ---------- | ------------ |
+| ADR-01 | [[short title]](decisions/ADR-01_[short-title].md)         | [accepted] | [dd.mm.yyyy] |
+
+## 3 Architectural goals and constraints
 
 Section 3 lists the requirements that shape our architecture: our quality goals as scenarios,
 rated by business value and technical risk, and the constraints we have to design around. How the
@@ -295,10 +328,26 @@ _Author: Adam_
 
 ### 8.2 Layers
 
-<!-- Lectures 8 and 9. The layers of your application and the rules between them. Leave this
-     section as it is until then. -->
+*Author: [first name]*
 
-_Follows with Lectures 8 and 9._
+<!-- One row per layer of your backend. A modular monolith: the layers inside one module,
+     and your modules in the sentence below the table. A package diagram is welcome, not required. -->
+
+| Layer         | Folder         | Contains              | May use               |
+| ------------- | -------------- | --------------------- | --------------------- |
+| [Web]         | `[src/web]`    | [routes, validation]  | [core]                |
+| [Core]        | `[src/core]`   | [services, domain]    | [nothing below it, or only its own interfaces] |
+| [Persistence] | `[src/db]`     | [repositories, SQL]   | [the database]        |
+
+[Our modules are …, and they talk to each other through … — or delete this line if you have no
+modules.]
+
+<!-- Follow one use case through your code and check every import against the table.
+     A shortcut you found is a result, not a failure: name the file and the line. -->
+
+**Checked in the code.** We followed [UC-xx name]: `[file]` → `[file]` → `[file]`. [The rule
+holds. / We found one shortcut: `[file]` imports `[what]` directly (line [n]). It is on our
+board.]
 
 ## 9 Data view
 
@@ -315,7 +364,19 @@ _Follows with Lecture 7._
 
 ## 11 Quality
 
-<!-- Lectures 7 to 9. How your architecture supports the qualities you need: availability,
-     security, maintainability, … Leave this section as it is until then. -->
+*Author: [first name]*
 
-_Follows with Lectures 7 to 9._
+<!-- One row per scenario from section 3.1. One or two tactics per scenario.
+     Where: a component from 8.1 or a layer from 8.2. Status: in place, planned or not planned.
+     Price: one short phrase — every tactic costs something. Decision: the ADR, if there is one. -->
+
+How our architecture reaches the scenarios of section 3.1:
+
+| Scenario      | Tactics   | Where       | Status   | Price   | Decision |
+| ------------- | --------- | ----------- | -------- | ------- | -------- |
+| QS-01 [name]  | [tactic]  | [component] | [status] | [price] | [— or ADR-xx] |
+| QS-02 [name]  | [tactic]  | [component] | [status] | [price] | [— or ADR-xx] |
+| QS-03 [name]  | [tactic]  | [component] | [status] | [price] | [— or ADR-xx] |
+
+[Two or three sentences on your highest-rated scenario: why these tactics, and which alternative
+you did not take. If a tactic is "not planned", say why in one sentence.]
