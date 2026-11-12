@@ -100,19 +100,14 @@ TASK 8 — two blocks for your SAD.md.
 
 ### 2.1 Architectural style
 
-*Author: [first name]*
+*Author: Adolfo*
 
-<!-- Three short paragraphs, together rarely longer than half a page.
-     Every reason names a scenario or a constraint from section 3 by its ID. -->
+**Main style:** Our backend is a layered monolith. There will be one main backend process (Monolith) running with Node.js. The browser and backend will communicate through the client over the REST API. The top levels folders will be also technical ordered: `routes`, `data`. Therefore, it is also layered.
 
-**Main style.** [Our backend is a … : one sentence on the main style and where it applies.]
-[Where we deviate from it, e.g., client-server between browser and backend, an event for mails.]
+**Why:** (1) **Four/three members with very limited time (C-02)**: We think a layered monolith is the simplest style between the alternatives. We also used it in the past with another project and that means we can use our personal experience on it.
+(2) **We should not spend money on anything as we don't have budget (C-03)**: we could deploy the backend alone using platforms like Vercel, which is free.
 
-**Why.** (1) [reason with an ID, e.g., C-02 or QS-02, and what the style does for it].
-(2) [reason with an ID]. (3) [optional: a third reason].
-
-**Rejected alternative.** [The style we considered], which would have given us [its strength].
-We did not choose it because [reason with an ID]. [Optional: when we would decide differently.]
+**Rejected alternative:** There was no rejected alternative. We already used a layered monolith in a previous project and wanted to try it again for the current one.
 
 <!--
 TASK 9 — two blocks for your SAD.md.
