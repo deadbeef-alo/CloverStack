@@ -60,6 +60,7 @@ _Author: Miriam_
 | SAD  | Software Architecture Document      |
 | SRS  | Software Requirements Specification |
 | UCR  | Use-case realization                |
+| E2E  | End-to-end                          |
 
 ### 1.4 References
 
@@ -120,14 +121,11 @@ TASK 9 — two blocks for your SAD.md.
 
 ### 2.2 Architecture decisions
 
-*Author: [first name]*
-
-<!-- One row per ADR in docs/decisions/. An accepted ADR is not rewritten: a new decision gets a
-     new ADR, and the old one gets the status "superseded by ADR-xx". -->
+*Author: Adolfo*
 
 | ADR    | Decision                                                  | Status     | Date         |
 | ------ | --------------------------------------------------------- | ---------- | ------------ |
-| ADR-01 | [[short title]](decisions/ADR-01_[short-title].md)         | [accepted] | [dd.mm.yyyy] |
+| ADR-01 | [Layered monolith](decisions/ADR-01_layered_monolith.md)         | accepted | 06.11.26 |
 
 ## 3 Architectural goals and constraints
 
@@ -359,19 +357,14 @@ _Follows with Lecture 7._
 
 ## 11 Quality
 
-*Author: [first name]*
-
-<!-- One row per scenario from section 3.1. One or two tactics per scenario.
-     Where: a component from 8.1 or a layer from 8.2. Status: in place, planned or not planned.
-     Price: one short phrase — every tactic costs something. Decision: the ADR, if there is one. -->
+*Author: Adolfo*
 
 How our architecture reaches the scenarios of section 3.1:
 
 | Scenario      | Tactics   | Where       | Status   | Price   | Decision |
 | ------------- | --------- | ----------- | -------- | ------- | -------- |
-| QS-01 [name]  | [tactic]  | [component] | [status] | [price] | [— or ADR-xx] |
-| QS-02 [name]  | [tactic]  | [component] | [status] | [price] | [— or ADR-xx] |
-| QS-03 [name]  | [tactic]  | [component] | [status] | [price] | [— or ADR-xx] |
+| QS-01 Tutorial for the games  | A component which shows how the game is played. It could be an image | Frontend | planned | Extra effort | — |
+| QS-02 Consistent Data Storage  | Ensure there are no duplicated or lost transactions, health check after system crashes. | Persistence, Database | planned | Data management becomes slower | — |
+| QS-03 Browser compatibility  | E2E tests with test data, every function should be covered  | Frontend | planned | Tests using Playwright | — |
 
-[Two or three sentences on your highest-rated scenario: why these tactics, and which alternative
-you did not take. If a tactic is "not planned", say why in one sentence.]
+QS-02 is the highest-rated scenario. If we check constantly that there are no dupes after each transaction we can ensure the consistency. If a crash happens, we should examine the database and look for any inconsistency. We have to find a way to prevent data lost using the client.
