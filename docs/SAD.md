@@ -321,16 +321,16 @@ _Author: Adam_
 
 ### 8.2 Layers
 
-*Author: [first name]*
+_Author: Adam_
 
 <!-- One row per layer of your backend. A modular monolith: the layers inside one module,
      and your modules in the sentence below the table. A package diagram is welcome, not required. -->
 
 | Layer         | Folder         | Contains              | May use               |
 | ------------- | -------------- | --------------------- | --------------------- |
-| [Web]         | `[src/web]`    | [routes, validation]  | [core]                |
-| [Core]        | `[src/core]`   | [services, domain]    | [nothing below it, or only its own interfaces] |
-| [Persistence] | `[src/db]`     | [repositories, SQL]   | [the database]        |
+| Frontend         | `src/frontend`    | Pages, components  | Backend                |
+| Backend        | `src/backend`   | Routes, Services| Database |
+| Database | `src/backend/src/db`     | Schema  |  Database       |
 
 [Our modules are …, and they talk to each other through … — or delete this line if you have no
 modules.]
