@@ -1,44 +1,59 @@
 # Risk List (RMMM)
 
-*Project: [project name] · Team: [names]*
+*Project: CloverStack · Team: Adam, Adolfo, Maksym, Miriam*
 
 RMMM stands for Risk Mitigation, Monitoring and Management. This list is a living document: we
 look at it at every sprint change and change the date of every row we touch.
 
 ## Our Scale
-
-<!-- Your scale, your words. Lecture 10, slide 18 shows an example you may start from — change the
-     words until all of you mean the same by each number. Five steps are usual; three work, too. -->
-
 | Value | Probability | Impact  |
 | :---: | ----------- | ------- |
-|   1   | [words]     | [words] |
-|   2   | [words]     | [words] |
-|   3   | [words]     | [words] |
-|   4   | [words]     | [words] |
-|   5   | [words]     | [words] |
+|   1   | almost never   | an hour lost                 |
+|   2   | unlikely       | a day lost                   |
+|   3   | possible       | a weekend lost               |
+|   4   | likely         | a sprint goal missed         |
+|   5   | almost certain | shorten our initial scope   |
 
 Score = probability × impact.
 
-**Our thresholds:** from [score]: act now · from [score]: plan · below that: watch
+**Our thresholds:** from 20: act now · from 15: plan · below that: watch
 
 ## Risks
+| ID   | Risk, short                     | Kind      | P | I | Score | Owner  | Status | Updated    |
+| ---- | ------------------------------- | --------- | - | - | ----- | ------ | ------ | ---------- |
+| R-01 | Exam weeks paralyze development | project   | 5 | 4 |  20   | Adolfo | open   | 16.11.26   |
+| R-02 | Scope was too ambitious         | project   | 3 | 5 |  15   | Adolfo | open   | 16.11.26   |
+| R-03 | [a few words]                   |           |   |   |       | [name] | open   | [DD.MM.YY] |
 
-<!-- One row per risk, sorted by score, highest first. Kind: project, technical or business.
-     Status: open, occurred or closed. Updated: date of the last change. -->
+### R-01 Exam weeks paralyze development
 
-| ID   | Risk, short   | Kind      | P | I | Score | Owner  | Status | Updated    |
-| ---- | ------------- | --------- | - | - | ----- | ------ | ------ | ---------- |
-| R-01 | [a few words] | technical |   |   |       | [name] | open   | [DD.MM.YY] |
-| R-02 | [a few words] |           |   |   |       | [name] | open   | [DD.MM.YY] |
-| R-03 | [a few words] |           |   |   |       | [name] | open   | [DD.MM.YY] |
+*Owner: Adolfo*
 
-<!-- A risk with impact 5 that you do not write in full: one sentence here on what you would do if
-     it occurred. -->
+**Risk:** Because we need time to learn for our exams, we would sacrifice one or two sprints, so the sprint goal will be missed.
 
-<!-- Copy the following block once for each risk you write in full. -->
+**Rating:** Probability 5 × impact 4 = 20. There will be an exam weeks for sure and we would cut the last sprint.
 
-### R-01 [Risk, short]
+**Mitigation:** We set a earlier deadline and see if we can finish our project in that period of time.
+
+**Indicator:** See if the project is cooked enough regarding our earlier deadline.
+
+**Contingency:** We can blame R-02 and say the scope was too ambitious.
+
+### R-02 Scope was too ambitious
+
+*Owner: Adolfo*
+
+**Risk:** Because our initial scope was abundant enough, we could need to change our plans, so we would reduce our initial scope.
+
+**Rating:** Probability 3 × impact 5 = 15. We can't say for sure if our scope was feasible and we could kill a use case to reduce our scope.
+
+**Mitigation:** Follow our constraint C-02.
+
+**Indicator:** We had to delay three or more sprint goals because the time wasn't enough.
+
+**Contingency:** Just kill a use case, like one of the three game modes or the settings menu.
+
+### R-03 [Risk, short]
 
 *Owner: [name]*
 
