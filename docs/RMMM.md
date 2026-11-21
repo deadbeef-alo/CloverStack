@@ -23,7 +23,7 @@ Score = probability × impact.
 | ---- | ------------------------------- | --------- | - | - | ----- | ------ | ------ | ---------- |
 | R-01 | Exam weeks paralyze development | project   | 5 | 4 |  20   | Adolfo | open   | 16.11.26   |
 | R-02 | Scope was too ambitious         | project   | 3 | 5 |  15   | Adolfo | open   | 16.11.26   |
-| R-03 | [a few words]                   |           |   |   |       | [name] | open   | [DD.MM.YY] |
+| R-03 | Integration Problems            | Technical | 4  | 5  | 20  | Adam  | open   | 21.11.26 |
 
 ### R-01 Exam weeks paralyze development
 
@@ -53,18 +53,16 @@ Score = probability × impact.
 
 **Contingency:** Just kill a use case, like one of the three game modes or the settings menu.
 
-### R-03 [Risk, short]
+### R-03 Integration Problems
 
-*Owner: [name]*
+*Owner: Adam*
 
-**Risk.** Because [cause — what is already true today], [event — what may happen], so [effect —
-what it would cost us].
+**Risk.** Because the frontend, backend and database have been developed separately, integration problems may appear, so we may not finish the application on time.
 
-**Rating.** Probability [value] × impact [value] = [score]. [One sentence: why these numbers.]
+**Rating.** Probability 4 × impact 5 = 20. Integration is likely to cause problems because the components have not yet been connected, and this could delay the whole project.
 
-**Mitigation.** [What we do before it happens, so that it becomes less likely or less harmful.
-Or: accepted, because …]
+**Mitigation.** Integrate the components step by step and test each connection as early as possible.
 
-**Indicator.** [The warning sign we watch for.]
+**Indicator.** Frontend requests fail or the backend cannot retrieve or store database data.
 
-**Contingency.** [Our plan B: what we do when it has happened anyway.]
+**Contingency.** We Focus on connecting the most important features first.
